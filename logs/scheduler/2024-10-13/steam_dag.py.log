@@ -1,0 +1,34 @@
+[2024-10-13T06:24:25.381+0000] {processor.py:157} INFO - Started process (PID=28) to work on /opt/airflow/dags/steam_dag.py
+[2024-10-13T06:24:25.381+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/steam_dag.py for tasks to queue
+[2024-10-13T06:24:25.382+0000] {logging_mixin.py:151} INFO - [2024-10-13T06:24:25.382+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/steam_dag.py
+[2024-10-13T06:24:25.397+0000] {logging_mixin.py:151} INFO - [2024-10-13T06:24:25.396+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/steam_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/steam_dag.py", line 10
+    'start_date': datetime(year: 2024,month:10,day:13)
+                               ^
+SyntaxError: invalid syntax
+[2024-10-13T06:24:25.398+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/steam_dag.py
+[2024-10-13T06:24:25.416+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/steam_dag.py took 0.038 seconds
+[2024-10-13T06:24:26.397+0000] {processor.py:157} INFO - Started process (PID=29) to work on /opt/airflow/dags/steam_dag.py
+[2024-10-13T06:24:26.403+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/steam_dag.py for tasks to queue
+[2024-10-13T06:24:26.407+0000] {logging_mixin.py:151} INFO - [2024-10-13T06:24:26.406+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/steam_dag.py
+[2024-10-13T06:24:26.422+0000] {logging_mixin.py:151} INFO - [2024-10-13T06:24:26.421+0000] {dagbag.py:347} ERROR - Failed to import: /opt/airflow/dags/steam_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/models/dagbag.py", line 343, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 846, in exec_module
+  File "<frozen importlib._bootstrap_external>", line 983, in get_code
+  File "<frozen importlib._bootstrap_external>", line 913, in source_to_code
+  File "<frozen importlib._bootstrap>", line 228, in _call_with_frames_removed
+  File "/opt/airflow/dags/steam_dag.py", line 10
+    'start_date': datetime(year: 2024,month:10,day:13)
+                               ^
+SyntaxError: invalid syntax
+[2024-10-13T06:24:26.422+0000] {processor.py:841} WARNING - No viable dags retrieved from /opt/airflow/dags/steam_dag.py
+[2024-10-13T06:24:26.443+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/steam_dag.py took 0.049 seconds
