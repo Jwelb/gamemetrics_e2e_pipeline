@@ -1,8 +1,7 @@
-from airflow import DAG
+from airflow import DAG, PythonOperator
 from datetime import datetime
 import os 
 import sys
-
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 default_args = {
@@ -26,7 +25,8 @@ extract = PythonOperator(
     python_callable = steam_pipeline,
     op_kwargs = {
         'file_name': f'steam_{file_postfix}',
-
-    }
+        'limit': 10000
+    },
+    dag=dag
 )
 # upload to s3 bucket.
