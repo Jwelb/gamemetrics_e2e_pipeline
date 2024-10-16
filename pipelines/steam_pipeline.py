@@ -12,6 +12,6 @@ def steam_pipeline():
     # conver the list of games into a dataframe 
     games_df = pd.DataFrame(games)
 
-    games_df = transform_games(games_df)
+    ## games_df = transform_games(games_df)
 
-    load_games
+    ## load_games

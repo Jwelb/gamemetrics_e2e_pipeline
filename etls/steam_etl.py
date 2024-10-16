@@ -17,7 +17,7 @@ def get_app_details(app_id):
     return response.json()
 
 
-
+# When calling the store api it must be within 200 per 5 minutes I have calculated it and it would do 57600 requests per day. 
 
 def extract_games():
     # get all the app details of every game
@@ -73,4 +73,4 @@ def extract_games():
     print("successfully collected all data!")
 
 
-def load_data:
+# def load_data:
