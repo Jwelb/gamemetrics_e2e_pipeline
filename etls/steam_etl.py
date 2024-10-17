@@ -1,8 +1,9 @@
 import requests
 import json
 import time
+import pandas as pd
 
-def get_app_list():
+def get_app_ids():
     """Fetches the list of all Steam apps."""
     url = 'http://api.steampowered.com/ISteamApps/GetAppList/v2/'
     response = requests.get(url)
@@ -18,27 +19,19 @@ def get_app_details(app_id):
 
 
 # When calling the store api it must be within 200 per 5 minutes I have calculated it and it would do 57600 requests per day. 
+# This is a function that recieves the id as a parameter and Returns a extracted data frame from API
+def extract_game_by_id(id):
+        print(f"Fetching details for app ID: {id}...")
 
-def extract_games():
-    # get all the app details of every game
-    print("Getting app list....")
-    apps = get_app_list()
-
-    # Then we have to interate through each app and loop the ids into the get_app_details function
-    all_games = []
-
-    for app in apps:
-        app_id = app['appid']
-        print(f"Fetching details for app ID: {app_id}...")
-
-        app_details = get_app_details(app_id)
+        app_details = get_app_details(id)
 
         # Check if the response is valid and if it was successful
-        if app_details is None or str(app_id) not in app_details or not app_details[str(app_id)]['success']:
-            print(f"Failed to get details for app ID: {app_id}")
-            continue  # Skip to the next app
-        # all data
-        data = app_details[str(app_id)]['data']
+        if app_details is None or str(id) not in app_details or not app_details[str(id)]['success']:
+            print(f"Failed to get details for app ID: {id}")
+            # return None if its bad data
+            return None
+        # Getting data 
+        data = app_details[str(id)]['data']
         type = data.get('type', 'N/A')
         required_age = data.get('required_age', 'N/A')
         is_free = data.get('is_free', 'N/A')
@@ -53,7 +46,7 @@ def extract_games():
         platforms = data.get('platforms', 'N/A')
         # Collect all data into a dictionary
         game_data = {
-            'id': app_id,
+            'id': id,
             'type' : type,
             'required_age': required_age,
             'is_free': is_free,
@@ -67,10 +60,16 @@ def extract_games():
             'description': description,
             'platforms' : platforms,
         }
-
-        all_games.append(game_data)
         print(f"Collected data for {title}.")
-    print("successfully collected all data!")
+        return game_data
 
 
-# def load_data:
+
+def extract_all_games():
+     list = get_app_ids()
+     games = []
+     if list is 0:
+          return games
+    for id in list:
+        games.append(extract_game_by_id(id))
+        list.remove(id)
