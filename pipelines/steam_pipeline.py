@@ -4,14 +4,9 @@
 # What we need to do is create functions that enable this
 # 1. 
 
-from etls.steam_etl import extract_games
+from etls.steam_etl import extract_game_by_id,get_app_ids,get_app_details,extract_all_games
 import pandas as pd
 def steam_pipeline():
-    games = extract_games()
-
-    # conver the list of games into a dataframe 
-    games_df = pd.DataFrame(games)
-
-    ## games_df = transform_games(games_df)
-
-    ## load_games
+    
+    # Were gonna get all the ids.
+    # Then were gonnna loop through all the ids were gonna check if the id is in 
