@@ -6,4 +6,3 @@ Terminal
 
 2. Open Docker and run Docker compose up -d --build to build the docker image
 
-3. 
