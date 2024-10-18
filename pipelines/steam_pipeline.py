@@ -10,3 +10,11 @@ def steam_pipeline():
     
     # Were gonna get all the ids.
     # Then were gonnna loop through all the ids were gonna check if the id is in 
+    games = extract_all_games()
+    games_df = pd.DataFrame(games)
+    # Tranformation
+    tranform_data()
+    load_to_azure()
+    
+    
+    
