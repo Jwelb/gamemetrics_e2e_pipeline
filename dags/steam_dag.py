@@ -10,11 +10,9 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 default_args = {
     'owner': 'Jordan Welborn',
-    'start_date': datetime(year: 2024,month:10,day:13)
-    'retries': 3,
+    'start_date': datetime(yeaar=2024,month=10,day=13),
+    'retries': 3
 }
-
-file_postfix = datetime.now().strftime("%Y%m%d")
 
 dag = DAG(
     dag_id= 'etl_steam_pipeline',
@@ -29,7 +27,6 @@ extract = PythonOperator(
     task_id = 'steam_extraction',
     python_callable = steam_pipeline,
     op_kwargs = {
-        'file_name': f'steam_{file_postfix}',
         'limit': 10000
     },
     dag=dag
