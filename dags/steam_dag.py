@@ -3,6 +3,10 @@ from datetime import datetime
 import os 
 import sys
 
+# Maybe implement TaskFlow instead. It looks easier to read.
+# TODO: Push and pull in the Xcom data!
+
+
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 default_args = {
