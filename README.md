@@ -4,4 +4,6 @@ Terminal
 - .\Scripts\activate
 - Done!
 
-TODO: pipeline file needs to be created
+2. Open Docker and run Docker compose up -d --build to build the docker image
+
+3. 

@@ -3,9 +3,14 @@
 
 # What we need to do is create functions that enable this
 # 1. 
-
-from etls.steam_etl import extract_game_by_id,get_app_ids,get_app_details,extract_all_games,transform_data,load_data_to_csv,test
+import sys
+import os
 import pandas as pd
+print(__file__)
+print(sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../etls'))))
+
+from steam_etl import test,transform_data,load_data_to_csv
+
 def steam_pipeline():
     
     # Were gonna get all the ids.
@@ -13,8 +18,8 @@ def steam_pipeline():
     games = test()
     games_df = pd.DataFrame(games)
     # Transforms the data 
-    transform_data = transform_data(games_df)
-    load_data_to_csv(transform_data)
+    transformed_data = transform_data(games_df)
+    load_data_to_csv(transformed_data)
     
     
     

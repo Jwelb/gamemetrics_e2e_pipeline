@@ -1,16 +1,17 @@
-from airflow import DAG, PythonOperator, LambdaCreateFunctionOperator
+from airflow import DAG 
+from airflow.operators.python import PythonOperator
 from datetime import datetime
 import os 
 import sys
-from pipelines import steam_pipeline
-# Maybe implement TaskFlow instead. It looks easier to read.
-# TODO: Push and pull in the Xcom data!
 
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../pipelines')))
+
+from steam_pipeline import steam_pipeline
+# Maybe implement TaskFlow instead. It looks easier to read.
 
 default_args = {
     'owner': 'Jordan Welborn',
-    'start_date': datetime(yeaar=2024,month=10,day=13),
+    'start_date': datetime(year=2024,month=10,day=13),
     'retries': 3
 }
 
