@@ -6,7 +6,7 @@ import pandas as pd
 import os
 account_name = os.getenv('AZURE_STORAGE_ACCOUNT')
 account_key = os.getenv('AZURE_ACCOUNT_KEY')
-PROCESSED_IDS_FILE = 'processed_ids.json'
+PROCESSED_IDS_FILE = '/opt/airflow/data/processed_ids.json'
 
 # These load and save functions are to pass this file into xcom to use with other tasks in airflow. 
 def load_processed_data():
@@ -133,12 +133,3 @@ def test():
         # This in theory would save all the ids in the processed_ids file but also check if the id has already been processed
         games.append(extract_game_by_id(id))
     return games
-
-
-
-
-extract_test= test()
-extract_df = pd.DataFrame(extract_test)
-transform_test = transform_data(extract_df)
-print(transform_test)
-load_data_to_csv(transform_test)

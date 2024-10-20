@@ -1,0 +1,409 @@
+[2024-10-20T01:45:44.727+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_steam_pipeline.steam_extraction manual__2024-10-20T01:45:43.121304+00:00 [queued]>
+[2024-10-20T01:45:44.737+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_steam_pipeline.steam_extraction manual__2024-10-20T01:45:43.121304+00:00 [queued]>
+[2024-10-20T01:45:44.737+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2024-10-20T01:45:44.751+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): steam_extraction> on 2024-10-20 01:45:43.121304+00:00
+[2024-10-20T01:45:44.756+0000] {standard_task_runner.py:57} INFO - Started process 60 to run task
+[2024-10-20T01:45:44.760+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'etl_steam_pipeline', 'steam_extraction', 'manual__2024-10-20T01:45:43.121304+00:00', '--job-id', '25', '--raw', '--subdir', 'DAGS_FOLDER/steam_dag.py', '--cfg-path', '/tmp/tmpsipo4zbd']
+[2024-10-20T01:45:44.763+0000] {standard_task_runner.py:85} INFO - Job 25: Subtask steam_extraction
+[2024-10-20T01:45:44.819+0000] {task_command.py:415} INFO - Running <TaskInstance: etl_steam_pipeline.steam_extraction manual__2024-10-20T01:45:43.121304+00:00 [running]> on host 8c4ad75bac1b
+[2024-10-20T01:45:44.915+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jordan Welborn' AIRFLOW_CTX_DAG_ID='etl_steam_pipeline' AIRFLOW_CTX_TASK_ID='steam_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-10-20T01:45:43.121304+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-20T01:45:43.121304+00:00'
+[2024-10-20T01:45:44.919+0000] {logging_mixin.py:151} INFO - Processed 2129810 Already! Sorry Try another
+[2024-10-20T01:45:44.920+0000] {logging_mixin.py:151} INFO - Processed 2335800 Already! Sorry Try another
+[2024-10-20T01:45:44.922+0000] {logging_mixin.py:151} INFO - Processed 986010 Already! Sorry Try another
+[2024-10-20T01:45:44.924+0000] {logging_mixin.py:151} INFO - Processed 2097170 Already! Sorry Try another
+[2024-10-20T01:45:44.925+0000] {logging_mixin.py:151} INFO - Processed 3155230 Already! Sorry Try another
+[2024-10-20T01:45:44.927+0000] {logging_mixin.py:151} INFO - Processed 3213430 Already! Sorry Try another
+[2024-10-20T01:45:44.928+0000] {logging_mixin.py:151} INFO - Processed 3282810 Already! Sorry Try another
+[2024-10-20T01:45:44.930+0000] {logging_mixin.py:151} INFO - Processed 585420 Already! Sorry Try another
+[2024-10-20T01:45:44.931+0000] {logging_mixin.py:151} INFO - Processed 1948280 Already! Sorry Try another
+[2024-10-20T01:45:44.932+0000] {logging_mixin.py:151} INFO - Processed 3231920 Already! Sorry Try another
+[2024-10-20T01:45:44.933+0000] {logging_mixin.py:151} INFO - Processed 1116170 Already! Sorry Try another
+[2024-10-20T01:45:44.934+0000] {logging_mixin.py:151} INFO - Processed 3045050 Already! Sorry Try another
+[2024-10-20T01:45:44.936+0000] {logging_mixin.py:151} INFO - Processed 2255370 Already! Sorry Try another
+[2024-10-20T01:45:44.937+0000] {logging_mixin.py:151} INFO - Processed 941460 Already! Sorry Try another
+[2024-10-20T01:45:44.938+0000] {logging_mixin.py:151} INFO - Processed 1520470 Already! Sorry Try another
+[2024-10-20T01:45:44.940+0000] {logging_mixin.py:151} INFO - Processed 553780 Already! Sorry Try another
+[2024-10-20T01:45:44.941+0000] {logging_mixin.py:151} INFO - Processed 308600 Already! Sorry Try another
+[2024-10-20T01:45:44.942+0000] {logging_mixin.py:151} INFO - Processed 1459630 Already! Sorry Try another
+[2024-10-20T01:45:44.943+0000] {logging_mixin.py:151} INFO - Processed 2319940 Already! Sorry Try another
+[2024-10-20T01:45:44.944+0000] {logging_mixin.py:151} INFO - Processed 2139460 Already! Sorry Try another
+[2024-10-20T01:45:44.945+0000] {logging_mixin.py:151} INFO - Processed 2334700 Already! Sorry Try another
+[2024-10-20T01:45:44.946+0000] {logging_mixin.py:151} INFO - Processed 2399420 Already! Sorry Try another
+[2024-10-20T01:45:44.948+0000] {logging_mixin.py:151} INFO - Processed 2999030 Already! Sorry Try another
+[2024-10-20T01:45:44.949+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 258550...
+[2024-10-20T01:45:45.281+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 258550
+[2024-10-20T01:45:45.283+0000] {logging_mixin.py:151} INFO - Processed 1851350 Already! Sorry Try another
+[2024-10-20T01:45:45.284+0000] {logging_mixin.py:151} INFO - Processed 3018090 Already! Sorry Try another
+[2024-10-20T01:45:45.286+0000] {logging_mixin.py:151} INFO - Processed 3271040 Already! Sorry Try another
+[2024-10-20T01:45:45.287+0000] {logging_mixin.py:151} INFO - Processed 2266650 Already! Sorry Try another
+[2024-10-20T01:45:45.288+0000] {logging_mixin.py:151} INFO - Processed 3198990 Already! Sorry Try another
+[2024-10-20T01:45:45.289+0000] {logging_mixin.py:151} INFO - Processed 2082570 Already! Sorry Try another
+[2024-10-20T01:45:45.290+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1892930...
+[2024-10-20T01:45:45.678+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 1892930
+[2024-10-20T01:45:45.680+0000] {logging_mixin.py:151} INFO - Processed 3277500 Already! Sorry Try another
+[2024-10-20T01:45:45.682+0000] {logging_mixin.py:151} INFO - Processed 3061690 Already! Sorry Try another
+[2024-10-20T01:45:45.683+0000] {logging_mixin.py:151} INFO - Processed 322330 Already! Sorry Try another
+[2024-10-20T01:45:45.684+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3199170...
+[2024-10-20T01:45:45.966+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 3199170
+[2024-10-20T01:45:45.968+0000] {logging_mixin.py:151} INFO - Processed 1273100 Already! Sorry Try another
+[2024-10-20T01:45:45.969+0000] {logging_mixin.py:151} INFO - Processed 3190970 Already! Sorry Try another
+[2024-10-20T01:45:45.971+0000] {logging_mixin.py:151} INFO - Processed 1771300 Already! Sorry Try another
+[2024-10-20T01:45:45.972+0000] {logging_mixin.py:151} INFO - Processed 2902720 Already! Sorry Try another
+[2024-10-20T01:45:45.973+0000] {logging_mixin.py:151} INFO - Processed 1138640 Already! Sorry Try another
+[2024-10-20T01:45:45.974+0000] {logging_mixin.py:151} INFO - Processed 2400840 Already! Sorry Try another
+[2024-10-20T01:45:45.975+0000] {logging_mixin.py:151} INFO - Processed 1208170 Already! Sorry Try another
+[2024-10-20T01:45:45.977+0000] {logging_mixin.py:151} INFO - Processed 2990080 Already! Sorry Try another
+[2024-10-20T01:45:45.978+0000] {logging_mixin.py:151} INFO - Processed 2980550 Already! Sorry Try another
+[2024-10-20T01:45:45.979+0000] {logging_mixin.py:151} INFO - Processed 2000890 Already! Sorry Try another
+[2024-10-20T01:45:45.980+0000] {logging_mixin.py:151} INFO - Processed 2587840 Already! Sorry Try another
+[2024-10-20T01:45:45.981+0000] {logging_mixin.py:151} INFO - Processed 2052040 Already! Sorry Try another
+[2024-10-20T01:45:45.982+0000] {logging_mixin.py:151} INFO - Processed 3270630 Already! Sorry Try another
+[2024-10-20T01:45:45.983+0000] {logging_mixin.py:151} INFO - Processed 3180930 Already! Sorry Try another
+[2024-10-20T01:45:45.983+0000] {logging_mixin.py:151} INFO - Processed 949230 Already! Sorry Try another
+[2024-10-20T01:45:45.984+0000] {logging_mixin.py:151} INFO - Processed 1128860 Already! Sorry Try another
+[2024-10-20T01:45:45.985+0000] {logging_mixin.py:151} INFO - Processed 1428090 Already! Sorry Try another
+[2024-10-20T01:45:45.986+0000] {logging_mixin.py:151} INFO - Processed 108600 Already! Sorry Try another
+[2024-10-20T01:45:45.987+0000] {logging_mixin.py:151} INFO - Processed 1999520 Already! Sorry Try another
+[2024-10-20T01:45:45.988+0000] {logging_mixin.py:151} INFO - Processed 3186690 Already! Sorry Try another
+[2024-10-20T01:45:45.989+0000] {logging_mixin.py:151} INFO - Processed 1121560 Already! Sorry Try another
+[2024-10-20T01:45:45.990+0000] {logging_mixin.py:151} INFO - Processed 1127660 Already! Sorry Try another
+[2024-10-20T01:45:45.991+0000] {logging_mixin.py:151} INFO - Processed 1185810 Already! Sorry Try another
+[2024-10-20T01:45:45.992+0000] {logging_mixin.py:151} INFO - Processed 1325730 Already! Sorry Try another
+[2024-10-20T01:45:45.993+0000] {logging_mixin.py:151} INFO - Processed 1503170 Already! Sorry Try another
+[2024-10-20T01:45:45.994+0000] {logging_mixin.py:151} INFO - Processed 1645220 Already! Sorry Try another
+[2024-10-20T01:45:45.995+0000] {logging_mixin.py:151} INFO - Processed 1790600 Already! Sorry Try another
+[2024-10-20T01:45:45.996+0000] {logging_mixin.py:151} INFO - Processed 1800860 Already! Sorry Try another
+[2024-10-20T01:45:45.997+0000] {logging_mixin.py:151} INFO - Processed 1803450 Already! Sorry Try another
+[2024-10-20T01:45:45.997+0000] {logging_mixin.py:151} INFO - Processed 1818450 Already! Sorry Try another
+[2024-10-20T01:45:45.998+0000] {logging_mixin.py:151} INFO - Processed 1962700 Already! Sorry Try another
+[2024-10-20T01:45:45.999+0000] {logging_mixin.py:151} INFO - Processed 1969650 Already! Sorry Try another
+[2024-10-20T01:45:46.000+0000] {logging_mixin.py:151} INFO - Processed 1997470 Already! Sorry Try another
+[2024-10-20T01:45:46.001+0000] {logging_mixin.py:151} INFO - Processed 2088250 Already! Sorry Try another
+[2024-10-20T01:45:46.002+0000] {logging_mixin.py:151} INFO - Processed 2103140 Already! Sorry Try another
+[2024-10-20T01:45:46.003+0000] {logging_mixin.py:151} INFO - Processed 2287960 Already! Sorry Try another
+[2024-10-20T01:45:46.003+0000] {logging_mixin.py:151} INFO - Processed 2407270 Already! Sorry Try another
+[2024-10-20T01:45:46.004+0000] {logging_mixin.py:151} INFO - Processed 2420660 Already! Sorry Try another
+[2024-10-20T01:45:46.005+0000] {logging_mixin.py:151} INFO - Processed 2421350 Already! Sorry Try another
+[2024-10-20T01:45:46.006+0000] {logging_mixin.py:151} INFO - Processed 2543180 Already! Sorry Try another
+[2024-10-20T01:45:46.007+0000] {logging_mixin.py:151} INFO - Processed 2585830 Already! Sorry Try another
+[2024-10-20T01:45:46.007+0000] {logging_mixin.py:151} INFO - Processed 2622000 Already! Sorry Try another
+[2024-10-20T01:45:46.008+0000] {logging_mixin.py:151} INFO - Processed 2708950 Already! Sorry Try another
+[2024-10-20T01:45:46.009+0000] {logging_mixin.py:151} INFO - Processed 3103040 Already! Sorry Try another
+[2024-10-20T01:45:46.010+0000] {logging_mixin.py:151} INFO - Processed 3123410 Already! Sorry Try another
+[2024-10-20T01:45:46.011+0000] {logging_mixin.py:151} INFO - Processed 3180170 Already! Sorry Try another
+[2024-10-20T01:45:46.011+0000] {logging_mixin.py:151} INFO - Processed 3226570 Already! Sorry Try another
+[2024-10-20T01:45:46.012+0000] {logging_mixin.py:151} INFO - Processed 3235910 Already! Sorry Try another
+[2024-10-20T01:45:46.013+0000] {logging_mixin.py:151} INFO - Processed 3256070 Already! Sorry Try another
+[2024-10-20T01:45:46.014+0000] {logging_mixin.py:151} INFO - Processed 3271530 Already! Sorry Try another
+[2024-10-20T01:45:46.014+0000] {logging_mixin.py:151} INFO - Processed 1049320 Already! Sorry Try another
+[2024-10-20T01:45:46.015+0000] {logging_mixin.py:151} INFO - Processed 499180 Already! Sorry Try another
+[2024-10-20T01:45:46.016+0000] {logging_mixin.py:151} INFO - Processed 581320 Already! Sorry Try another
+[2024-10-20T01:45:46.017+0000] {logging_mixin.py:151} INFO - Processed 787480 Already! Sorry Try another
+[2024-10-20T01:45:46.017+0000] {logging_mixin.py:151} INFO - Processed 991270 Already! Sorry Try another
+[2024-10-20T01:45:46.018+0000] {logging_mixin.py:151} INFO - Processed 1254320 Already! Sorry Try another
+[2024-10-20T01:45:46.019+0000] {logging_mixin.py:151} INFO - Processed 2654540 Already! Sorry Try another
+[2024-10-20T01:45:46.019+0000] {logging_mixin.py:151} INFO - Processed 3027940 Already! Sorry Try another
+[2024-10-20T01:45:46.020+0000] {logging_mixin.py:151} INFO - Processed 3037030 Already! Sorry Try another
+[2024-10-20T01:45:46.021+0000] {logging_mixin.py:151} INFO - Processed 3054770 Already! Sorry Try another
+[2024-10-20T01:45:46.022+0000] {logging_mixin.py:151} INFO - Processed 3059840 Already! Sorry Try another
+[2024-10-20T01:45:46.022+0000] {logging_mixin.py:151} INFO - Processed 3060080 Already! Sorry Try another
+[2024-10-20T01:45:46.023+0000] {logging_mixin.py:151} INFO - Processed 3101770 Already! Sorry Try another
+[2024-10-20T01:45:46.024+0000] {logging_mixin.py:151} INFO - Processed 3137120 Already! Sorry Try another
+[2024-10-20T01:45:46.025+0000] {logging_mixin.py:151} INFO - Processed 3138330 Already! Sorry Try another
+[2024-10-20T01:45:46.025+0000] {logging_mixin.py:151} INFO - Processed 3142540 Already! Sorry Try another
+[2024-10-20T01:45:46.026+0000] {logging_mixin.py:151} INFO - Processed 3163250 Already! Sorry Try another
+[2024-10-20T01:45:46.027+0000] {logging_mixin.py:151} INFO - Processed 3169100 Already! Sorry Try another
+[2024-10-20T01:45:46.028+0000] {logging_mixin.py:151} INFO - Processed 3170420 Already! Sorry Try another
+[2024-10-20T01:45:46.028+0000] {logging_mixin.py:151} INFO - Processed 3170430 Already! Sorry Try another
+[2024-10-20T01:45:46.029+0000] {logging_mixin.py:151} INFO - Processed 3206520 Already! Sorry Try another
+[2024-10-20T01:45:46.029+0000] {logging_mixin.py:151} INFO - Processed 3027620 Already! Sorry Try another
+[2024-10-20T01:45:46.030+0000] {logging_mixin.py:151} INFO - Processed 2633080 Already! Sorry Try another
+[2024-10-20T01:45:46.031+0000] {logging_mixin.py:151} INFO - Processed 1816140 Already! Sorry Try another
+[2024-10-20T01:45:46.031+0000] {logging_mixin.py:151} INFO - Processed 3141870 Already! Sorry Try another
+[2024-10-20T01:45:46.032+0000] {logging_mixin.py:151} INFO - Processed 1108740 Already! Sorry Try another
+[2024-10-20T01:45:46.033+0000] {logging_mixin.py:151} INFO - Processed 1135960 Already! Sorry Try another
+[2024-10-20T01:45:46.033+0000] {logging_mixin.py:151} INFO - Processed 1339340 Already! Sorry Try another
+[2024-10-20T01:45:46.034+0000] {logging_mixin.py:151} INFO - Processed 3108720 Already! Sorry Try another
+[2024-10-20T01:45:46.034+0000] {logging_mixin.py:151} INFO - Processed 3261060 Already! Sorry Try another
+[2024-10-20T01:45:46.035+0000] {logging_mixin.py:151} INFO - Processed 792200 Already! Sorry Try another
+[2024-10-20T01:45:46.036+0000] {logging_mixin.py:151} INFO - Processed 809090 Already! Sorry Try another
+[2024-10-20T01:45:46.037+0000] {logging_mixin.py:151} INFO - Processed 874450 Already! Sorry Try another
+[2024-10-20T01:45:46.037+0000] {logging_mixin.py:151} INFO - Processed 972200 Already! Sorry Try another
+[2024-10-20T01:45:46.038+0000] {logging_mixin.py:151} INFO - Processed 3288690 Already! Sorry Try another
+[2024-10-20T01:45:46.039+0000] {logging_mixin.py:151} INFO - Processed 2307350 Already! Sorry Try another
+[2024-10-20T01:45:46.040+0000] {logging_mixin.py:151} INFO - Processed 3192760 Already! Sorry Try another
+[2024-10-20T01:45:46.041+0000] {logging_mixin.py:151} INFO - Processed 451340 Already! Sorry Try another
+[2024-10-20T01:45:46.041+0000] {logging_mixin.py:151} INFO - Processed 3187730 Already! Sorry Try another
+[2024-10-20T01:45:46.042+0000] {logging_mixin.py:151} INFO - Processed 3088430 Already! Sorry Try another
+[2024-10-20T01:45:46.042+0000] {logging_mixin.py:151} INFO - Processed 218230 Already! Sorry Try another
+[2024-10-20T01:45:46.043+0000] {logging_mixin.py:151} INFO - Processed 294770 Already! Sorry Try another
+[2024-10-20T01:45:46.043+0000] {logging_mixin.py:151} INFO - Processed 39660 Already! Sorry Try another
+[2024-10-20T01:45:46.044+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 774941...
+[2024-10-20T01:45:46.344+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 774941
+[2024-10-20T01:45:46.346+0000] {logging_mixin.py:151} INFO - Processed 589290 Already! Sorry Try another
+[2024-10-20T01:45:46.347+0000] {logging_mixin.py:151} INFO - Processed 2543510 Already! Sorry Try another
+[2024-10-20T01:45:46.348+0000] {logging_mixin.py:151} INFO - Processed 3263740 Already! Sorry Try another
+[2024-10-20T01:45:46.350+0000] {logging_mixin.py:151} INFO - Processed 1116390 Already! Sorry Try another
+[2024-10-20T01:45:46.351+0000] {logging_mixin.py:151} INFO - Processed 1200770 Already! Sorry Try another
+[2024-10-20T01:45:46.352+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1326030...
+[2024-10-20T01:45:46.601+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 1326030
+[2024-10-20T01:45:46.603+0000] {logging_mixin.py:151} INFO - Processed 1603640 Already! Sorry Try another
+[2024-10-20T01:45:46.604+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2051010...
+[2024-10-20T01:45:46.918+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 2051010
+[2024-10-20T01:45:46.920+0000] {logging_mixin.py:151} INFO - Processed 2108330 Already! Sorry Try another
+[2024-10-20T01:45:46.921+0000] {logging_mixin.py:151} INFO - Processed 2116120 Already! Sorry Try another
+[2024-10-20T01:45:46.922+0000] {logging_mixin.py:151} INFO - Processed 2184350 Already! Sorry Try another
+[2024-10-20T01:45:46.923+0000] {logging_mixin.py:151} INFO - Processed 2305760 Already! Sorry Try another
+[2024-10-20T01:45:46.924+0000] {logging_mixin.py:151} INFO - Processed 2395260 Already! Sorry Try another
+[2024-10-20T01:45:46.925+0000] {logging_mixin.py:151} INFO - Processed 2500160 Already! Sorry Try another
+[2024-10-20T01:45:46.926+0000] {logging_mixin.py:151} INFO - Processed 2529080 Already! Sorry Try another
+[2024-10-20T01:45:46.927+0000] {logging_mixin.py:151} INFO - Processed 2570210 Already! Sorry Try another
+[2024-10-20T01:45:46.929+0000] {logging_mixin.py:151} INFO - Processed 2576020 Already! Sorry Try another
+[2024-10-20T01:45:46.930+0000] {logging_mixin.py:151} INFO - Processed 2582560 Already! Sorry Try another
+[2024-10-20T01:45:46.931+0000] {logging_mixin.py:151} INFO - Processed 2716120 Already! Sorry Try another
+[2024-10-20T01:45:46.932+0000] {logging_mixin.py:151} INFO - Processed 2716820 Already! Sorry Try another
+[2024-10-20T01:45:46.933+0000] {logging_mixin.py:151} INFO - Processed 2719030 Already! Sorry Try another
+[2024-10-20T01:45:46.934+0000] {logging_mixin.py:151} INFO - Processed 2803360 Already! Sorry Try another
+[2024-10-20T01:45:46.935+0000] {logging_mixin.py:151} INFO - Processed 3207390 Already! Sorry Try another
+[2024-10-20T01:45:46.936+0000] {logging_mixin.py:151} INFO - Processed 538030 Already! Sorry Try another
+[2024-10-20T01:45:46.937+0000] {logging_mixin.py:151} INFO - Processed 1170950 Already! Sorry Try another
+[2024-10-20T01:45:46.938+0000] {logging_mixin.py:151} INFO - Processed 1217490 Already! Sorry Try another
+[2024-10-20T01:45:46.939+0000] {logging_mixin.py:151} INFO - Processed 1264171 Already! Sorry Try another
+[2024-10-20T01:45:46.940+0000] {logging_mixin.py:151} INFO - Processed 1270010 Already! Sorry Try another
+[2024-10-20T01:45:46.941+0000] {logging_mixin.py:151} INFO - Processed 1351370 Already! Sorry Try another
+[2024-10-20T01:45:46.942+0000] {logging_mixin.py:151} INFO - Processed 1392390 Already! Sorry Try another
+[2024-10-20T01:45:46.943+0000] {logging_mixin.py:151} INFO - Processed 1437840 Already! Sorry Try another
+[2024-10-20T01:45:46.944+0000] {logging_mixin.py:151} INFO - Processed 1474930 Already! Sorry Try another
+[2024-10-20T01:45:46.945+0000] {logging_mixin.py:151} INFO - Processed 1480050 Already! Sorry Try another
+[2024-10-20T01:45:46.946+0000] {logging_mixin.py:151} INFO - Processed 1513420 Already! Sorry Try another
+[2024-10-20T01:45:46.947+0000] {logging_mixin.py:151} INFO - Processed 1682600 Already! Sorry Try another
+[2024-10-20T01:45:46.948+0000] {logging_mixin.py:151} INFO - Processed 1832840 Already! Sorry Try another
+[2024-10-20T01:45:46.949+0000] {logging_mixin.py:151} INFO - Processed 1840800 Already! Sorry Try another
+[2024-10-20T01:45:46.950+0000] {logging_mixin.py:151} INFO - Processed 3012290 Already! Sorry Try another
+[2024-10-20T01:45:46.951+0000] {logging_mixin.py:151} INFO - Processed 3080030 Already! Sorry Try another
+[2024-10-20T01:45:46.952+0000] {logging_mixin.py:151} INFO - Processed 3226270 Already! Sorry Try another
+[2024-10-20T01:45:46.953+0000] {logging_mixin.py:151} INFO - Processed 2191410 Already! Sorry Try another
+[2024-10-20T01:45:46.954+0000] {logging_mixin.py:151} INFO - Processed 1653190 Already! Sorry Try another
+[2024-10-20T01:45:46.955+0000] {logging_mixin.py:151} INFO - Processed 3280460 Already! Sorry Try another
+[2024-10-20T01:45:46.956+0000] {logging_mixin.py:151} INFO - Processed 1211980 Already! Sorry Try another
+[2024-10-20T01:45:46.957+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1424230...
+[2024-10-20T01:45:47.249+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 1424230
+[2024-10-20T01:45:47.251+0000] {logging_mixin.py:151} INFO - Processed 1584090 Already! Sorry Try another
+[2024-10-20T01:45:47.252+0000] {logging_mixin.py:151} INFO - Processed 1607250 Already! Sorry Try another
+[2024-10-20T01:45:47.253+0000] {logging_mixin.py:151} INFO - Processed 1786790 Already! Sorry Try another
+[2024-10-20T01:45:47.254+0000] {logging_mixin.py:151} INFO - Processed 1830190 Already! Sorry Try another
+[2024-10-20T01:45:47.255+0000] {logging_mixin.py:151} INFO - Processed 1905180 Already! Sorry Try another
+[2024-10-20T01:45:47.256+0000] {logging_mixin.py:151} INFO - Processed 1911610 Already! Sorry Try another
+[2024-10-20T01:45:47.257+0000] {logging_mixin.py:151} INFO - Processed 2015620 Already! Sorry Try another
+[2024-10-20T01:45:47.259+0000] {logging_mixin.py:151} INFO - Processed 2064650 Already! Sorry Try another
+[2024-10-20T01:45:47.260+0000] {logging_mixin.py:151} INFO - Processed 2075100 Already! Sorry Try another
+[2024-10-20T01:45:47.261+0000] {logging_mixin.py:151} INFO - Processed 2114740 Already! Sorry Try another
+[2024-10-20T01:45:47.262+0000] {logging_mixin.py:151} INFO - Processed 2236060 Already! Sorry Try another
+[2024-10-20T01:45:47.263+0000] {logging_mixin.py:151} INFO - Processed 2316930 Already! Sorry Try another
+[2024-10-20T01:45:47.264+0000] {logging_mixin.py:151} INFO - Processed 2341070 Already! Sorry Try another
+[2024-10-20T01:45:47.265+0000] {logging_mixin.py:151} INFO - Processed 2359660 Already! Sorry Try another
+[2024-10-20T01:45:47.266+0000] {logging_mixin.py:151} INFO - Processed 2401970 Already! Sorry Try another
+[2024-10-20T01:45:47.267+0000] {logging_mixin.py:151} INFO - Processed 2566880 Already! Sorry Try another
+[2024-10-20T01:45:47.268+0000] {logging_mixin.py:151} INFO - Processed 2645820 Already! Sorry Try another
+[2024-10-20T01:45:47.269+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2658770...
+[2024-10-20T01:45:47.519+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 2658770
+[2024-10-20T01:45:47.521+0000] {logging_mixin.py:151} INFO - Processed 2751000 Already! Sorry Try another
+[2024-10-20T01:45:47.522+0000] {logging_mixin.py:151} INFO - Processed 2807150 Already! Sorry Try another
+[2024-10-20T01:45:47.524+0000] {logging_mixin.py:151} INFO - Processed 2990190 Already! Sorry Try another
+[2024-10-20T01:45:47.525+0000] {logging_mixin.py:151} INFO - Processed 3051280 Already! Sorry Try another
+[2024-10-20T01:45:47.526+0000] {logging_mixin.py:151} INFO - Processed 3080680 Already! Sorry Try another
+[2024-10-20T01:45:47.528+0000] {logging_mixin.py:151} INFO - Processed 3084620 Already! Sorry Try another
+[2024-10-20T01:45:47.529+0000] {logging_mixin.py:151} INFO - Processed 3156770 Already! Sorry Try another
+[2024-10-20T01:45:47.530+0000] {logging_mixin.py:151} INFO - Processed 3192310 Already! Sorry Try another
+[2024-10-20T01:45:47.531+0000] {logging_mixin.py:151} INFO - Processed 3217200 Already! Sorry Try another
+[2024-10-20T01:45:47.532+0000] {logging_mixin.py:151} INFO - Processed 3227820 Already! Sorry Try another
+[2024-10-20T01:45:47.533+0000] {logging_mixin.py:151} INFO - Processed 3231380 Already! Sorry Try another
+[2024-10-20T01:45:47.534+0000] {logging_mixin.py:151} INFO - Processed 3283090 Already! Sorry Try another
+[2024-10-20T01:45:47.535+0000] {logging_mixin.py:151} INFO - Processed 3292980 Already! Sorry Try another
+[2024-10-20T01:45:47.536+0000] {logging_mixin.py:151} INFO - Processed 1000050 Already! Sorry Try another
+[2024-10-20T01:45:47.536+0000] {logging_mixin.py:151} INFO - Processed 1213700 Already! Sorry Try another
+[2024-10-20T01:45:47.537+0000] {logging_mixin.py:151} INFO - Processed 1245560 Already! Sorry Try another
+[2024-10-20T01:45:47.538+0000] {logging_mixin.py:151} INFO - Processed 1272320 Already! Sorry Try another
+[2024-10-20T01:45:47.539+0000] {logging_mixin.py:151} INFO - Processed 1375630 Already! Sorry Try another
+[2024-10-20T01:45:47.540+0000] {logging_mixin.py:151} INFO - Processed 1418750 Already! Sorry Try another
+[2024-10-20T01:45:47.541+0000] {logging_mixin.py:151} INFO - Processed 1554770 Already! Sorry Try another
+[2024-10-20T01:45:47.542+0000] {logging_mixin.py:151} INFO - Processed 17510 Already! Sorry Try another
+[2024-10-20T01:45:47.543+0000] {logging_mixin.py:151} INFO - Processed 372080 Already! Sorry Try another
+[2024-10-20T01:45:47.544+0000] {logging_mixin.py:151} INFO - Processed 689760 Already! Sorry Try another
+[2024-10-20T01:45:47.545+0000] {logging_mixin.py:151} INFO - Processed 2399830 Already! Sorry Try another
+[2024-10-20T01:45:47.546+0000] {logging_mixin.py:151} INFO - Processed 3104680 Already! Sorry Try another
+[2024-10-20T01:45:47.547+0000] {logging_mixin.py:151} INFO - Processed 1282270 Already! Sorry Try another
+[2024-10-20T01:45:47.548+0000] {logging_mixin.py:151} INFO - Processed 2084360 Already! Sorry Try another
+[2024-10-20T01:45:47.549+0000] {logging_mixin.py:151} INFO - Processed 3050 Already! Sorry Try another
+[2024-10-20T01:45:47.550+0000] {logging_mixin.py:151} INFO - Processed 2488620 Already! Sorry Try another
+[2024-10-20T01:45:47.550+0000] {logging_mixin.py:151} INFO - Processed 416000 Already! Sorry Try another
+[2024-10-20T01:45:47.551+0000] {logging_mixin.py:151} INFO - Processed 2384580 Already! Sorry Try another
+[2024-10-20T01:45:47.552+0000] {logging_mixin.py:151} INFO - Processed 3023930 Already! Sorry Try another
+[2024-10-20T01:45:47.553+0000] {logging_mixin.py:151} INFO - Processed 3254600 Already! Sorry Try another
+[2024-10-20T01:45:47.554+0000] {logging_mixin.py:151} INFO - Processed 1324780 Already! Sorry Try another
+[2024-10-20T01:45:47.555+0000] {logging_mixin.py:151} INFO - Processed 1395520 Already! Sorry Try another
+[2024-10-20T01:45:47.556+0000] {logging_mixin.py:151} INFO - Processed 2635410 Already! Sorry Try another
+[2024-10-20T01:45:47.556+0000] {logging_mixin.py:151} INFO - Processed 3061810 Already! Sorry Try another
+[2024-10-20T01:45:47.557+0000] {logging_mixin.py:151} INFO - Processed 1592190 Already! Sorry Try another
+[2024-10-20T01:45:47.558+0000] {logging_mixin.py:151} INFO - Processed 3256520 Already! Sorry Try another
+[2024-10-20T01:45:47.559+0000] {logging_mixin.py:151} INFO - Processed 1696810 Already! Sorry Try another
+[2024-10-20T01:45:47.560+0000] {logging_mixin.py:151} INFO - Processed 2666580 Already! Sorry Try another
+[2024-10-20T01:45:47.561+0000] {logging_mixin.py:151} INFO - Processed 3190930 Already! Sorry Try another
+[2024-10-20T01:45:47.561+0000] {logging_mixin.py:151} INFO - Processed 714010 Already! Sorry Try another
+[2024-10-20T01:45:47.562+0000] {logging_mixin.py:151} INFO - Processed 2407830 Already! Sorry Try another
+[2024-10-20T01:45:47.563+0000] {logging_mixin.py:151} INFO - Processed 3173890 Already! Sorry Try another
+[2024-10-20T01:45:47.564+0000] {logging_mixin.py:151} INFO - Processed 3204560 Already! Sorry Try another
+[2024-10-20T01:45:47.564+0000] {logging_mixin.py:151} INFO - Processed 1845940 Already! Sorry Try another
+[2024-10-20T01:45:47.565+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2169200...
+[2024-10-20T01:45:47.837+0000] {logging_mixin.py:151} INFO - Collected data for Sniper Elite: Resistance.
+[2024-10-20T01:45:47.841+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2315070...
+[2024-10-20T01:45:48.132+0000] {logging_mixin.py:151} INFO - Collected data for MetaDOS Playtest.
+[2024-10-20T01:45:48.136+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2624670...
+[2024-10-20T01:45:48.398+0000] {logging_mixin.py:151} INFO - Collected data for Matt's Hidden Cats.
+[2024-10-20T01:45:48.403+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2875110...
+[2024-10-20T01:45:48.699+0000] {logging_mixin.py:151} INFO - Collected data for Commander Quest Demo.
+[2024-10-20T01:45:48.703+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2485550...
+[2024-10-20T01:45:48.991+0000] {logging_mixin.py:151} INFO - Collected data for Dwarves: Glory, Death and Loot Playtest.
+[2024-10-20T01:45:48.995+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2678080...
+[2024-10-20T01:45:49.359+0000] {logging_mixin.py:151} INFO - Collected data for Tides of Tomorrow 🌊.
+[2024-10-20T01:45:49.364+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2730540...
+[2024-10-20T01:45:49.679+0000] {logging_mixin.py:151} INFO - Collected data for Card-en-Ciel.
+[2024-10-20T01:45:49.683+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2678640...
+[2024-10-20T01:45:49.938+0000] {logging_mixin.py:151} INFO - Collected data for Journey of Realm：Dawn Dew.
+[2024-10-20T01:45:49.943+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3254100...
+[2024-10-20T01:45:50.212+0000] {logging_mixin.py:151} INFO - Collected data for Murder Avenue Demo.
+[2024-10-20T01:45:50.216+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3248450...
+[2024-10-20T01:45:50.550+0000] {logging_mixin.py:151} INFO - Collected data for InvisibleHand.
+[2024-10-20T01:45:50.553+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1702010...
+[2024-10-20T01:45:50.859+0000] {logging_mixin.py:151} INFO - Collected data for Sengoku Dynasty.
+[2024-10-20T01:45:50.865+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2863340...
+[2024-10-20T01:45:51.126+0000] {logging_mixin.py:151} INFO - Collected data for Murder Avenue.
+[2024-10-20T01:45:51.130+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2367610...
+[2024-10-20T01:45:51.414+0000] {logging_mixin.py:151} INFO - Collected data for Critter Café.
+[2024-10-20T01:45:51.419+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2605790...
+[2024-10-20T01:45:51.681+0000] {logging_mixin.py:151} INFO - Collected data for Deep Rock Galactic: Rogue Core.
+[2024-10-20T01:45:51.685+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3234420...
+[2024-10-20T01:45:51.993+0000] {logging_mixin.py:151} INFO - Collected data for 報い-Retribution.
+[2024-10-20T01:45:51.997+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2386720...
+[2024-10-20T01:45:52.266+0000] {logging_mixin.py:151} INFO - Collected data for STRAFTAT.
+[2024-10-20T01:45:52.270+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 238430...
+[2024-10-20T01:45:52.649+0000] {logging_mixin.py:151} INFO - Collected data for Contagion.
+[2024-10-20T01:45:52.653+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 407530...
+[2024-10-20T01:45:52.955+0000] {logging_mixin.py:151} INFO - Collected data for ARK: The Survival Of The Fittest.
+[2024-10-20T01:45:52.959+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2510960...
+[2024-10-20T01:45:53.358+0000] {logging_mixin.py:151} INFO - Collected data for Temtem: Swarm.
+[2024-10-20T01:45:53.362+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2819550...
+[2024-10-20T01:45:53.661+0000] {logging_mixin.py:151} INFO - Collected data for Temtem: Swarm Demo.
+[2024-10-20T01:45:53.665+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3101950...
+[2024-10-20T01:45:53.928+0000] {logging_mixin.py:151} INFO - Collected data for Temtem: Swarm Playtest.
+[2024-10-20T01:45:53.933+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1371980...
+[2024-10-20T01:45:54.209+0000] {logging_mixin.py:151} INFO - Collected data for No Rest for the Wicked.
+[2024-10-20T01:45:54.214+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3020620...
+[2024-10-20T01:45:54.488+0000] {logging_mixin.py:151} INFO - Collected data for KNOCKturne.
+[2024-10-20T01:45:54.492+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1452250...
+[2024-10-20T01:45:54.768+0000] {logging_mixin.py:151} INFO - Collected data for Underground Garage.
+[2024-10-20T01:45:54.772+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2710980...
+[2024-10-20T01:45:55.026+0000] {logging_mixin.py:151} INFO - Collected data for Into The Grid Playtest.
+[2024-10-20T01:45:55.030+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3249720...
+[2024-10-20T01:45:55.329+0000] {logging_mixin.py:151} INFO - Collected data for KNOCKturne Soundtrack.
+[2024-10-20T01:45:55.333+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2524700...
+[2024-10-20T01:45:55.622+0000] {logging_mixin.py:151} INFO - Collected data for Altarium.
+[2024-10-20T01:45:55.624+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2796980...
+[2024-10-20T01:45:55.904+0000] {logging_mixin.py:151} INFO - Collected data for Magic Card：CZ12.
+[2024-10-20T01:45:55.907+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2192020...
+[2024-10-20T01:45:56.214+0000] {logging_mixin.py:151} INFO - Collected data for Phones not Allowed.
+[2024-10-20T01:45:56.217+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 512900...
+[2024-10-20T01:45:56.487+0000] {logging_mixin.py:151} INFO - Collected data for Streets of Rogue.
+[2024-10-20T01:45:56.491+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3268100...
+[2024-10-20T01:45:56.763+0000] {logging_mixin.py:151} INFO - Collected data for Finnish Cabin Mayhem - Mökkimähinä Demo.
+[2024-10-20T01:45:56.767+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2686820...
+[2024-10-20T01:45:57.081+0000] {logging_mixin.py:151} INFO - Collected data for isekizima: Ruins and Tails Journey.
+[2024-10-20T01:45:57.085+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1154670...
+[2024-10-20T01:45:57.365+0000] {logging_mixin.py:151} INFO - Collected data for Die by the Blade.
+[2024-10-20T01:45:57.369+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3071520...
+[2024-10-20T01:45:57.633+0000] {logging_mixin.py:151} INFO - Collected data for There's No Monsters.
+[2024-10-20T01:45:57.637+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 2725560...
+[2024-10-20T01:45:58.181+0000] {logging_mixin.py:151} INFO - Collected data for Idle Fishing.
+[2024-10-20T01:45:58.185+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3261860...
+[2024-10-20T01:45:58.526+0000] {logging_mixin.py:151} INFO - Collected data for CAIGE: Cum Overflow.
+[2024-10-20T01:45:58.530+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3057460...
+[2024-10-20T01:45:58.870+0000] {logging_mixin.py:151} INFO - Collected data for There's No Aliens.
+[2024-10-20T01:45:58.874+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 3199180...
+[2024-10-20T01:45:59.151+0000] {logging_mixin.py:151} INFO - Collected data for Steel Swarm: APOCALYPSE.
+[2024-10-20T01:45:59.155+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 1359270...
+[2024-10-20T01:45:59.419+0000] {logging_mixin.py:151} INFO - Collected data for Pirate Commander.
+[2024-10-20T01:45:59.423+0000] {logging_mixin.py:151} INFO - Fetching details for app ID: 285049...
+[2024-10-20T01:45:59.846+0000] {logging_mixin.py:151} INFO - Failed to get details for app ID: 285049
+[2024-10-20T01:45:59.854+0000] {logging_mixin.py:151} INFO - Dropped 240 rows due to failed or duplicate rows.
+[2024-10-20T01:45:59.854+0000] {logging_mixin.py:151} INFO - steam_gamesRAW_2024-10-20_01_45_59.854853.csv
+[2024-10-20T01:46:00.448+0000] {_universal.py:514} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/steam_gamesRAW_2024-10-20_01_45_59.854853.csv'
+Request method: 'DELETE'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0ef4958a-8e85-11ef-92a6-0242ac120005'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-6.10.4-linuxkit-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-10-20T01:46:00.621+0000] {_universal.py:550} INFO - Response status: 404
+Response headers:
+    'Content-Length': '215'
+    'Content-Type': 'application/xml'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '5daf8966-401e-0077-1091-2230ee000000'
+    'x-ms-client-request-id': '0ef4958a-8e85-11ef-92a6-0242ac120005'
+    'x-ms-version': 'REDACTED'
+    'x-ms-error-code': 'BlobNotFound'
+    'Date': 'Sun, 20 Oct 2024 01:46:00 GMT'
+[2024-10-20T01:46:00.627+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/steam_gamesRAW_2024-10-20_01_45_59.854853.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '14359'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0f0ff0aa-8e85-11ef-92a6-0242ac120005'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-6.10.4-linuxkit-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-10-20T01:46:00.667+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '5daf8987-401e-0077-2a91-2230ee000000'
+    'x-ms-client-request-id': '0f0ff0aa-8e85-11ef-92a6-0242ac120005'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 20 Oct 2024 01:46:00 GMT'
+[2024-10-20T01:46:00.670+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/steam_gamesRAW_2024-10-20_01_45_59.854853.csv?comp=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '91'
+    'x-ms-meta-is_directory': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/xml'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0f168316-8e85-11ef-92a6-0242ac120005'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-6.10.4-linuxkit-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-10-20T01:46:00.717+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Sun, 20 Oct 2024 01:46:00 GMT'
+    'Etag': '"0x8DCF0A8F359BF70"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '5daf8992-401e-0077-3391-2230ee000000'
+    'x-ms-client-request-id': '0f168316-8e85-11ef-92a6-0242ac120005'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Sun, 20 Oct 2024 01:46:00 GMT'
+[2024-10-20T01:46:00.719+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-10-20T01:46:00.732+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=etl_steam_pipeline, task_id=steam_extraction, execution_date=20241020T014543, start_date=20241020T014544, end_date=20241020T014600
+[2024-10-20T01:46:00.774+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-10-20T01:46:00.793+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check

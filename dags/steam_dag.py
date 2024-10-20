@@ -1,6 +1,6 @@
 from airflow import DAG 
 from airflow.operators.python import PythonOperator
-from datetime import datetime
+from datetime import datetime,timedelta
 import os 
 import sys
 
@@ -11,8 +11,8 @@ from steam_pipeline import steam_pipeline
 
 default_args = {
     'owner': 'Jordan Welborn',
-    'start_date': datetime(year=2024,month=10,day=13),
-    'retries': 3
+    'start_date': datetime(year=2024,month=10,day=20),
+    'retries': 1
 }
 
 dag = DAG(
@@ -27,6 +27,7 @@ dag = DAG(
 extract = PythonOperator(
     task_id = 'steam_extraction',
     python_callable = steam_pipeline,
+    execution_timeout=timedelta(seconds=60),
     op_kwargs = {
         'limit': 10000
     },
