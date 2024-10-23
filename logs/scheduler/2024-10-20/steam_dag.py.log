@@ -27027,3 +27027,12 @@ json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
 [2024-10-20T02:02:47.626+0000] {logging_mixin.py:151} INFO - [2024-10-20T02:02:47.626+0000] {dag.py:2915} INFO - Sync 1 DAGs
 [2024-10-20T02:02:47.653+0000] {logging_mixin.py:151} INFO - [2024-10-20T02:02:47.653+0000] {dag.py:3696} INFO - Setting next_dagrun for etl_steam_pipeline to 2024-10-20T00:00:00+00:00, run_after=2024-10-21T00:00:00+00:00
 [2024-10-20T02:02:47.674+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/steam_dag.py took 0.400 seconds
+[2024-10-20T02:03:17.877+0000] {processor.py:157} INFO - Started process (PID=145) to work on /opt/airflow/dags/steam_dag.py
+[2024-10-20T02:03:17.878+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/steam_dag.py for tasks to queue
+[2024-10-20T02:03:17.883+0000] {logging_mixin.py:151} INFO - [2024-10-20T02:03:17.882+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/steam_dag.py
+[2024-10-20T02:03:18.185+0000] {logging_mixin.py:151} INFO - /opt/airflow/pipelines/steam_pipeline.py
+[2024-10-20T02:03:18.186+0000] {logging_mixin.py:151} INFO - None
+[2024-10-20T02:03:18.194+0000] {processor.py:839} INFO - DAG(s) dict_keys(['etl_steam_pipeline']) retrieved from /opt/airflow/dags/steam_dag.py
+[2024-10-20T02:03:18.222+0000] {logging_mixin.py:151} INFO - [2024-10-20T02:03:18.221+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2024-10-20T02:03:18.249+0000] {logging_mixin.py:151} INFO - [2024-10-20T02:03:18.249+0000] {dag.py:3696} INFO - Setting next_dagrun for etl_steam_pipeline to 2024-10-20T00:00:00+00:00, run_after=2024-10-21T00:00:00+00:00
+[2024-10-20T02:03:18.268+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/steam_dag.py took 0.396 seconds

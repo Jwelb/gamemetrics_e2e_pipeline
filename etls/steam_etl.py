@@ -8,18 +8,6 @@ account_name = os.getenv('AZURE_STORAGE_ACCOUNT')
 account_key = os.getenv('AZURE_ACCOUNT_KEY')
 PROCESSED_IDS_FILE = '/opt/airflow/data/processed_ids.json'
 
-# These load and save functions are to pass this file into xcom to use with other tasks in airflow. 
-def load_processed_data():
-    if os.path.exists(PROCESSED_IDS_FILE):
-        with open(PROCESSED_IDS_FILE, 'r') as f:
-            return set(json.load(f))  # Use set for faster lookups
-    return set()
-    
-def save_processed_data(processed_ids):
-    with open(PROCESSED_IDS_FILE, 'w') as f:
-        json.dump(list(processed_ids), f)
-
-
 # Tested and Done!
 def get_app_ids():
     """Fetches the list of all Steam apps."""
@@ -33,7 +21,6 @@ def get_app_ids():
     return ids
         
         
-
 # This gets the app details based on the specified app_id and returns json. 
 def get_app_details(app_id):
     """Fetches details for a specific app using its app ID."""
@@ -45,20 +32,12 @@ def get_app_details(app_id):
 # When calling the store api it must be within 200 per 5 minutes I have calculated it and it would do 57600 requests per day. 
 # This is a function that recieves the id as a parameter and Returns a extracted data frame from API
 def extract_game_by_id(id):
-        # This creates a processed_data variable to make sure that each id hasnt been processed before. 
-        processed_data = load_processed_data()
-        if id in processed_data:
-            print(f'Processed {id} Already! Sorry Try another')
-            return {}
-        # If it hasnt been processed than do this!
-        else:
-            print(f"Fetching details for app ID: {id}...")
-
+            # This creates a processed_data variable to make sure that each id hasnt been processed before. 
+            # If it hasnt been processed than do this!
             app_details = get_app_details(id)
-
             # Check if the response is valid and if it was successful
             if app_details is None or str(id) not in app_details or not app_details[str(id)]['success']:
-                print(f"Failed to get details for app ID: {id}")
+                print(f"Failed to get details for app ID: {id} or API LIMIT reached")
                 # return None if its bad data
                 return {}
             # Getting data 
@@ -93,18 +72,31 @@ def extract_game_by_id(id):
             }
             print(f"Collected data for {title}.")
             # adding it to the processed ids
-            processed_data.add(id)
-            # saving the file of processed ids
-            save_processed_data(processed_data)
+
             return game_data
 
 # extracts all games
 def extract_all_games():
+    counter = 0
     list = get_app_ids()
     games = []
     for id in list:
         games.append(extract_game_by_id(id))
+        counter +=1 
+        if counter == 200:
+            print("Reached 200 requests...sleeping for 5 minutes")
+            time.sleep(360)
+            counter = 0
+        else:
+            continue
     return games
+
+def extract_and_transform():
+    """Combines extraction and transformation."""
+    games = extract_all_games()
+    games_df = pd.DataFrame(games)
+    return transform_data(games_df)
+
 
 def transform_data(games_df: pd.DataFrame):
     original_shape = games_df.shape[0]
@@ -117,7 +109,6 @@ def transform_data(games_df: pd.DataFrame):
 
 
 # This function gets the parameter and just pushes the results to the azure storage account
-# def load_to_azure():
 def load_data_to_csv(data: pd.DataFrame):
     from datetime import datetime
     file_name = ('steam_gamesRAW_'+ str(datetime.now().date()) + "_" + str(datetime.now().time()).replace(":","_")+ '.csv')
@@ -133,3 +124,5 @@ def test():
         # This in theory would save all the ids in the processed_ids file but also check if the id has already been processed
         games.append(extract_game_by_id(id))
     return games
+
+extract_all_games()
