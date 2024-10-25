@@ -45,11 +45,13 @@ def extract_games(token, limit=50, offset=0):
 
     games = []
     while True:
+        print("Hitting")
         response = requests.post(IGDB_URL, headers=headers, data=data)
         if response.status_code == 429:
             print("Rate limit hit, sleeping for 1 second.")
             time.sleep(1)
             continue
+        print("Hitting here")
         response.raise_for_status()
         result = response.json()
         if not result:  # No more results
@@ -200,19 +202,19 @@ def load_Themedata_to_csv(data: pd.DataFrame):
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
 
-async def extract_and_transform():
+def extract_and_transform():
     """Combines extraction and transformation."""
-    games = await extract_all_games()
+    games = extract_all_games()
     games_df = transform_data(games)
     return games_df
 
 
-async def main():
+def main():
     """Main function to orchestrate the extraction, transformation, and loading process."""
 
     # Extract and transform game data asynchronously
-    #print("Extracting and transforming game data...")
-    #games_df = await extract_and_transform()
+    print("Extracting and transforming game data...")
+    games_df = extract_and_transform()
 
     # Load game data to CSV if there is data
     #if not games_df.empty:
@@ -240,7 +242,7 @@ async def main():
 if __name__ == "__main__":
     try:
         # Use asyncio.run() to call the main async function
-        asyncio.run(main())
+        main()
     except Exception as e:
         print(f"An error occurred: {e}")
 
