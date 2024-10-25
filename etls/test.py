@@ -3,6 +3,7 @@ import os
 import pandas as pd
 import asyncio
 import aiohttp
+import time
 from datetime import datetime
 
 # IGDB API Credentials (set these in your environment variables)
@@ -11,6 +12,7 @@ client_secret = os.getenv('Client_secret')
 
 # URL for the IGDB API
 IGDB_URL = 'https://api.igdb.com/v4/games'
+asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 def get_igdb_token():
     """Authenticate with IGDB and retrieve the access token."""
@@ -24,7 +26,8 @@ def get_igdb_token():
     response.raise_for_status()
     return response.json()['access_token']
 
-async def extract_games(token, limit=50, offset=0):
+
+def extract_games(token, limit=50, offset=0):
     """Extracts game data from the IGDB API with pagination."""
     headers = {
         'Client-ID': client_id,
@@ -40,48 +43,83 @@ async def extract_games(token, limit=50, offset=0):
         f'limit {limit}; offset {offset};'
     )
 
-    async with aiohttp.ClientSession() as session:
-        async with session.post(IGDB_URL, headers=headers, data=data) as response:
-            if response.status == 429:
-                print("Rate limit hit, sleeping for 1 second.")
-                await asyncio.sleep(1)
-                return await extract_games(token, limit, offset)  # Retry after sleeping
-            response.raise_for_status()
-            return await response.json()
+    games = []
+    while True:
+        response = requests.post(IGDB_URL, headers=headers, data=data)
+        if response.status_code == 429:
+            print("Rate limit hit, sleeping for 1 second.")
+            time.sleep(1)
+            continue
+        response.raise_for_status()
+        result = response.json()
+        if not result:  # No more results
+            break
+        games.extend(result)
+        offset += limit
 
-async def extract_all_games():
+    return games
+
+
+def extract_all_games():
     """Extracts all games using pagination."""
     token = get_igdb_token()
     games = []
     offset = 0
-    limit = 50  # Maximum limit for a single IGDB API request
-
-    # Use a semaphore to limit concurrent requests
-    semaphore = asyncio.Semaphore(4)
-
-    async def fetch_games(offset):
-        async with semaphore:
-            game_data = await extract_games(token, limit=limit, offset=offset)
-            return game_data
+    limit = 150  # Maximum limit for a single IGDB API request
 
     while True:
-        tasks = [fetch_games(offset) for _ in range(8)]
-        results = await asyncio.gather(*tasks)
-
-        for result in results:
-            if result:
-                games.extend(result)
-            else:
-                print("No more results to fetch.")
-                return games
-
-        offset += limit
-        if len(results) < 8:  # If fewer results than requested, exit loop
+        game_data = extract_games(token, limit=limit, offset=offset)
+        if not game_data:
             break
-
-        await asyncio.sleep(0.25)  # Avoid exceeding request limits
+        games.extend(game_data)
+        offset += limit
 
     return games
+
+
+def extract_all_companies():
+    """Extracts all companies using pagination."""
+    token = get_igdb_token()
+    companies = []
+    offset = 0
+    limit = 150  # Maximum limit for a single IGDB API request
+
+    while True:
+        company_data = extract_company_data(token, limit=limit, offset=offset)
+        if not company_data:
+            break
+        companies.extend(company_data)
+        offset += limit
+
+    return companies
+
+
+def extract_company_data(token, limit=50, offset=0):
+    """Extracts company data from the IGDB API with pagination."""
+    headers = {
+        'Client-ID': client_id,
+        'Authorization': f'Bearer {token}',
+        'Accept': 'application/json'
+    }
+    data = (
+        f'fields name;'
+    )
+
+    companies = []
+    while True:
+        response = requests.post('https://api.igdb.com/v4/companies', headers=headers, data=data)
+        if response.status_code == 429:
+            print("Rate limit hit, sleeping for 1 second.")
+            time.sleep(1)
+            continue
+        response.raise_for_status()
+        result = response.json()
+        if not result:  # No more results
+            break
+        companies.extend(result)
+        offset += limit
+
+    return companies
 
 def extract_platforms():
     """Extract platform data from IGDB."""
@@ -110,6 +148,7 @@ def extract_themes():
     response = requests.post(url, headers=headers, data=data)
     response.raise_for_status()
     return response.json()
+
 
 def transform_data(games):
     """Performs data transformations on the game data."""
@@ -141,6 +180,16 @@ def load_Platformdata_to_csv(data: pd.DataFrame):
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
 
+def load_Companydata_to_csv(data: pd.DataFrame):
+    """Loads the transformed data to a CSV file."""
+    if data.empty:
+        print("No data to save.")
+        return
+
+    file_name = f'CompanyData_{datetime.now().date()}_{datetime.now().strftime("%H_%M_%S")}.csv'
+    print(f"Saving to {file_name}")
+    data.to_csv(file_name, index=False)
+
 def load_Themedata_to_csv(data: pd.DataFrame):
     """Loads the transformed data to a CSV file."""
     if data.empty:
@@ -157,14 +206,41 @@ async def extract_and_transform():
     games_df = transform_data(games)
     return games_df
 
+
+async def main():
+    """Main function to orchestrate the extraction, transformation, and loading process."""
+
+    # Extract and transform game data asynchronously
+    #print("Extracting and transforming game data...")
+    #games_df = await extract_and_transform()
+
+    # Load game data to CSV if there is data
+    #if not games_df.empty:
+        #load_Gamedata_to_csv(games_df)
+
+    # Extract and load platform data (regular function)
+    print("Extracting platform data...")
+    #platform_data = extract_platforms()
+    #platform_df = pd.json_normalize(platform_data)
+    #load_Platformdata_to_csv(platform_df)
+
+    # Extract and load theme data (regular function)
+    print("Extracting theme data...")
+    #theme_data = extract_themes()
+    #theme_df = pd.json_normalize(theme_data)
+    #load_Themedata_to_csv(theme_df)
+
+    # Extract and load company data asynchronously
+    print("Extracting company data...")
+    company_data = extract_all_companies()
+    company_df = pd.json_normalize(company_data)
+    load_Companydata_to_csv(company_df)
+
+# Entry point to run async code
 if __name__ == "__main__":
-    platforms = extract_platforms()
-    themes = extract_themes()
-    df_platforms = pd.DataFrame(platforms)
-    df_themes = pd.DataFrame(themes)
-    load_Platformdata_to_csv(df_platforms)
-    load_Themedata_to_csv(df_themes)
-    # Uncomment to run game extraction
-    # games_df = asyncio.run(extract_and_transform())
-    # print(f"Extracted {len(games_df)} rows.")
-    # load_data_to_csv(games_df)
+    try:
+        # Use asyncio.run() to call the main async function
+        asyncio.run(main())
+    except Exception as e:
+        print(f"An error occurred: {e}")
+
