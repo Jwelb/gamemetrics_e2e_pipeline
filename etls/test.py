@@ -24,6 +24,7 @@ def get_igdb_token():
     }
     response = requests.post(auth_url, params=params)
     response.raise_for_status()
+    print(response.json()['access_token'])
     return response.json()['access_token']
 
 
@@ -39,10 +40,10 @@ def extract_games(token, limit, offset):
         f'category,dlcs,first_release_date,'
         f'involved_companies,name,parent_game,'
         f'platforms,status,storyline,'
-        f'summary,themes,updated_at;'
+        f'themes,updated_at;'
         f'limit {limit}; offset {offset};'
     )
-
+    # this method is temporary it still didnt really work. 
     games = []
     
     response = requests.post(IGDB_URL, headers=headers, data=data)
@@ -50,9 +51,26 @@ def extract_games(token, limit, offset):
         print("Rate limit hit, sleeping for 1 second.")
         time.sleep(1)
     response.raise_for_status()
-    result = response.json()
-    print("Adding game..")
-    games.extend(result)
+    data = response.json()
+    print("Adding games..")
+    for item in data:
+        game_data = {
+        "id": item.get("id", "N/A"),
+        "aggregated_rating": item.get("aggregated_rating", "N/A"),
+        "aggregated_rating_count": item.get("aggregated_rating_count", "N/A"),
+        "category": item.get("category", "N/A"),
+        "dlcs": item.get("dlcs", "N/A"),
+        "first_release_date": item.get("first_release_date", "N/A"),
+        "involved_companies": item.get("involved_companies", "N/A"),
+        "name": item.get("name", "N/A"),
+        "parent_game": item.get("parent_game", "N/A"),
+        "platforms": item.get("platforms", "N/A"),
+        "status": item.get("status", "N/A"),
+        "storyline": item.get("storyline", "N/A"),
+        "themes": item.get("themes", "N/A"),
+        "updated_at": item.get("updated_at", "N/A"),
+        }
+        games.append(game_data)
     offset += limit
 
     return games
@@ -64,15 +82,16 @@ def extract_all_games():
     games = []
     offset = 0
     limit = 500 # Maximum limit for a single IGDB API request
-
+    total_game_data = 0
     while True:
         game_data = extract_games(token, limit=limit, offset=offset)
+        total_game_data += len(game_data)
         if not game_data:
             print("No more games found, ending extraction....")
             break
         games.extend(game_data)
         offset += limit
-        print(f"Fetched {len(game_data)} companies. Total so far: {len(game_data)}")
+        print(f"Fetched {len(game_data)} companies. Total so far: {total_game_data}")
 
 
     return games
@@ -199,10 +218,10 @@ def load_Themedata_to_csv(data: pd.DataFrame):
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
 
-def extract_and_transform():
+def extract_gamesdf():
     """Combines extraction and transformation."""
     games = extract_all_games()
-    games_df = transform_data(games)
+    games_df = pd.DataFrame(games)
     return games_df
 
 
@@ -211,7 +230,7 @@ def main():
 
     # Extract and transform game data asynchronously
     print("Extracting and transforming game data...")
-    games_df = extract_and_transform()
+    games_df = extract_gamesdf()
     load_Gamedata_to_csv(games_df)
     # Load game data to CSV if there is data
     #if not games_df.empty:
