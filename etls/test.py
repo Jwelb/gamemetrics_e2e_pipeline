@@ -114,6 +114,7 @@ def extract_all_companies():
 
     return companies
 
+
 # BINGOOOOO EXACTLY RIGHT
 def extract_company_data(token, limit, offset):
     """Extracts company data from the IGDB API with pagination."""
@@ -147,7 +148,7 @@ def extract_platforms():
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
-    data = 'fields name;'
+    data = 'fields name; limit 500;'
     response = requests.post(url, headers=headers, data=data)
     response.raise_for_status()
     return response.json()
@@ -161,7 +162,7 @@ def extract_themes():
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
-    data = 'fields name; limit 150;'
+    data = 'fields name; limit 500;'
     response = requests.post(url, headers=headers, data=data)
     response.raise_for_status()
     return response.json()
@@ -228,24 +229,24 @@ def main():
     """Main function to orchestrate the extraction, transformation, and loading process."""
 
     # Extract and transform game data asynchronously
-    print("Extracting and transforming game data...")
-    games_df = extract_gamesdf()
-    load_Gamedata_to_csv(games_df)
+    #print("Extracting and transforming game data...")
+    #games_df = extract_gamesdf()
+    #load_Gamedata_to_csv(games_df)
     # Load game data to CSV if there is data
     #if not games_df.empty:
         #load_Gamedata_to_csv(games_df)
 
     # Extract and load platform data (regular function)
-    #print("Extracting platform data...")
-    #platform_data = extract_platforms()
-    #platform_df = pd.json_normalize(platform_data)
-    #load_Platformdata_to_csv(platform_df)
+    print("Extracting platform data...")
+    platform_data = extract_platforms()
+    platform_df = pd.DataFrame(platform_data)
+    load_Platformdata_to_csv(platform_df)
 
     # Extract and load theme data (regular function)
-    #print("Extracting theme data...")
-    #theme_data = extract_themes()
-    #theme_df = pd.json_normalize(theme_data)
-    #load_Themedata_to_csv(theme_df)
+    print("Extracting theme data...")
+    theme_data = extract_themes()
+    theme_df = pd.DataFrame(theme_data)
+    load_Themedata_to_csv(theme_df)
 
     # Extract and load company data asynchronously
     #print("Extracting company data...")
