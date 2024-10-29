@@ -66,7 +66,6 @@ def extract_games(token, limit, offset):
         "parent_game": item.get("parent_game", "N/A"),
         "platforms": item.get("platforms", "N/A"),
         "status": item.get("status", "N/A"),
-        "storyline": item.get("storyline", "N/A"),
         "themes": item.get("themes", "N/A"),
         "updated_at": item.get("updated_at", "N/A"),
         }
@@ -162,7 +161,7 @@ def extract_themes():
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
-    data = 'fields name;'
+    data = 'fields name; limit 150;'
     response = requests.post(url, headers=headers, data=data)
     response.raise_for_status()
     return response.json()
