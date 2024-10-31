@@ -194,7 +194,7 @@ def load_Platformdata_to_csv(data: pd.DataFrame):
         print("No data to save.")
         return
 
-    file_name = f'PlatformData_{datetime.now().date()}_{datetime.now().strftime("%H_%M_%S")}.csv'
+    file_name = f'PlatformData.csv'
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
 
@@ -204,7 +204,7 @@ def load_Companydata_to_csv(data: pd.DataFrame):
         print("No data to save.")
         return
 
-    file_name = f'CompanyData_{datetime.now().date()}_{datetime.now().strftime("%H_%M_%S")}.csv'
+    file_name = f'CompanyData.csv'
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
 
@@ -214,7 +214,7 @@ def load_Themedata_to_csv(data: pd.DataFrame):
         print("No data to save.")
         return
 
-    file_name = f'ThemeData_{datetime.now().date()}_{datetime.now().strftime("%H_%M_%S")}.csv'
+    file_name = f'ThemeData_.csv'
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
 
