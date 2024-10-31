@@ -229,9 +229,9 @@ def main():
     """Main function to orchestrate the extraction, transformation, and loading process."""
 
     # Extract and transform game data asynchronously
-    #print("Extracting and transforming game data...")
-    #games_df = extract_gamesdf()
-    #load_Gamedata_to_csv(games_df)
+    print("Extracting and transforming game data...")
+    games_df = extract_gamesdf()
+    load_Gamedata_to_csv(games_df)
     # Load game data to CSV if there is data
     #if not games_df.empty:
         #load_Gamedata_to_csv(games_df)
@@ -249,10 +249,10 @@ def main():
     load_Themedata_to_csv(theme_df)
 
     # Extract and load company data asynchronously
-    #print("Extracting company data...")
-    #company_data = extract_all_companies()
-    #company_df = pd.json_normalize(company_data)
-    #load_Companydata_to_csv(company_df)
+    print("Extracting company data...")
+    company_data = extract_all_companies()
+    company_df = pd.json_normalize(company_data)
+    load_Companydata_to_csv(company_df)
 
 # Entry point to run async code
 if __name__ == "__main__":
