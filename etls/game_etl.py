@@ -14,6 +14,7 @@ client_secret = os.getenv('Client_secret')
 IGDB_URL = 'https://api.igdb.com/v4/games'
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
+# Good
 def get_igdb_token():
     """Authenticate with IGDB and retrieve the access token."""
     auth_url = 'https://id.twitch.tv/oauth2/token'
@@ -27,7 +28,7 @@ def get_igdb_token():
     print(response.json()['access_token'])
     return response.json()['access_token']
 
-
+# Good
 def extract_games(token, limit, offset):
     """Extracts game data from the IGDB API with pagination."""
     headers = {
@@ -35,6 +36,7 @@ def extract_games(token, limit, offset):
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
+    # Remove story line
     data = (
         f'fields aggregated_rating,aggregated_rating_count,'
         f'category,dlcs,first_release_date,'
@@ -42,8 +44,7 @@ def extract_games(token, limit, offset):
         f'platforms,status,storyline,'
         f'themes,updated_at;'
         f'limit {limit}; offset {offset};'
-    )
-    # this method is temporary it still didnt really work. 
+    ) 
     games = []
     
     response = requests.post(IGDB_URL, headers=headers, data=data)
@@ -74,7 +75,7 @@ def extract_games(token, limit, offset):
 
     return games
 
-
+# Good
 def extract_all_games():
     """Extracts all games using pagination."""
     token = get_igdb_token()
@@ -139,6 +140,7 @@ def extract_company_data(token, limit, offset):
 
     return companies
 
+# Good
 def extract_platforms():
     """Extract platform data from IGDB."""
     token = get_igdb_token()
@@ -167,17 +169,7 @@ def extract_themes():
     response.raise_for_status()
     return response.json()
 
-
-def transform_data(games):
-    """Performs data transformations on the game data."""
-    if not games:
-        print("No data to transform.")
-        return pd.DataFrame()
-
-    # Flatten the list of dictionaries into a DataFrame
-    games_df = pd.json_normalize(games)
-    return games_df
-
+# All these loading functions will need to be configured to one function to load in Azure Storage container. Reference the added_functions.py
 def load_Gamedata_to_csv(data: pd.DataFrame):
     """Loads the transformed data to a CSV file."""
     if data.empty:
