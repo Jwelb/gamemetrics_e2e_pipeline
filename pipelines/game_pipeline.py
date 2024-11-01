@@ -11,6 +11,7 @@ print(sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
 
 from game_etl import extract_gamesdf,load_GameData_to_csv,extract_platforms,extract_themes,extract_all_companies,load_GameData_to_csv,load_Platformdata_to_csv,load_Themedata_to_csv,load_CompanyData_to_csv
 
+# DONT include loading 
 def game_pipeline():
     """Main function to orchestrate the extraction, transformation, and loading process."""
 

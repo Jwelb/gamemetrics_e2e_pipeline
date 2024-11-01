@@ -60,4 +60,4 @@ services:
     command: celery worker
 
 volumes:
-  postgres_data: # Declare the named volume here
+  postgres_data:

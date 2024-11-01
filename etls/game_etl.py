@@ -36,12 +36,12 @@ def extract_games(token, limit, offset):
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
-    # Remove story line
+    # Remove story line [DONE]
     data = (
         f'fields aggregated_rating,aggregated_rating_count,'
         f'category,dlcs,first_release_date,'
         f'involved_companies,name,parent_game,'
-        f'platforms,status,storyline,'
+        f'platforms,status'
         f'themes,updated_at;'
         f'limit {limit}; offset {offset};'
     ) 
