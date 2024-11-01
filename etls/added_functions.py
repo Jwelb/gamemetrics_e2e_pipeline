@@ -1,3 +1,5 @@
+account_name = os.getenv('AZURE_STORAGE_ACCOUNT')
+account_key = os.getenv('AZURE_ACCOUNT_KEY')
 def load_data_to_csv(data: pd.DataFrame):
     from datetime import datetime
     file_name = ('steam_gamesRAW_'+ str(datetime.now().date()) + "_" + str(datetime.now().time()).replace(":","_")+ '.csv')
