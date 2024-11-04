@@ -12,7 +12,7 @@ print(sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__),
 from game_etl import extract_platforms,extract_themes,extract_all_companies, extract_all_games, load_data_to_azure
 
 
-def game_pipeline():
+def extract_data():
     """Main function to orchestrate the extraction, transformation, and loading process."""
     # Extract game data
     print("Extracting and transforming game data...")
@@ -43,7 +43,7 @@ def game_pipeline():
     company_df.to_csv(company_path)
 
 
-def load():
+def load_data():
     game_path = '/data/GameData.csv'
     platform_path = '/data/PlatformData.csv'
     theme_path = '/data/ThemeData.csv'

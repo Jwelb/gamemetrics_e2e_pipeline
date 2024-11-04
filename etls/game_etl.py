@@ -37,44 +37,23 @@ def extract_games(token, limit, offset):
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
-    # Remove story line [DONE]
     data = (
         f'fields aggregated_rating,aggregated_rating_count,'
         f'category,dlcs,first_release_date,'
         f'involved_companies,name,parent_game,'
-        f'platforms,status'
+        f'platforms,status,'
         f'themes,updated_at;'
         f'limit {limit}; offset {offset};'
-    ) 
-    games = []
-    
+    )
     response = requests.post(IGDB_URL, headers=headers, data=data)
     if response.status_code == 429:
         print("Rate limit hit, sleeping for 1 second.")
         time.sleep(1)
     response.raise_for_status()
-    data = response.json()
+    games_data = response.json()
     print("Adding games..")
-    for item in data:
-        game_data = {
-        "id": item.get("id", "N/A"),
-        "aggregated_rating": item.get("aggregated_rating", "N/A"),
-        "aggregated_rating_count": item.get("aggregated_rating_count", "N/A"),
-        "category": item.get("category", "N/A"),
-        "dlcs": item.get("dlcs", "N/A"),
-        "first_release_date": item.get("first_release_date", "N/A"),
-        "involved_companies": item.get("involved_companies", "N/A"),
-        "name": item.get("name", "N/A"),
-        "parent_game": item.get("parent_game", "N/A"),
-        "platforms": item.get("platforms", "N/A"),
-        "status": item.get("status", "N/A"),
-        "themes": item.get("themes", "N/A"),
-        "updated_at": item.get("updated_at", "N/A"),
-        }
-        games.append(game_data)
-    offset += limit
 
-    return games
+    return games_data
 
 # Good
 def extract_all_games():
@@ -83,16 +62,14 @@ def extract_all_games():
     games = []
     offset = 0
     limit = 500 # Maximum limit for a single IGDB API request
-    total_game_data = 0
     while True:
         game_data = extract_games(token, limit=limit, offset=offset)
-        total_game_data += len(game_data)
         if not game_data:
             print("No more games found, ending extraction....")
             break
         games.extend(game_data)
         offset += limit
-        print(f"Fetched {len(game_data)} companies. Total so far: {total_game_data}")
+        print(f"Fetched {len(game_data)} companies. Total so far: {len(games)}")
 
 
     return games
@@ -104,7 +81,6 @@ def extract_all_companies():
     companies = []
     offset = 0
     limit = 500  # Maximum limit for a single IGDB API request
-
     while True:
         company_data = extract_company_data(token, limit=limit, offset=offset)
         if not company_data:
@@ -112,7 +88,7 @@ def extract_all_companies():
             break
         companies.extend(company_data)
         offset += limit
-        print(f"Fetched {len(company_data)} companies. Total so far: {len(company_data)}")
+        print(f"Fetched {len(company_data)} companies. Total so far: {len(companies)}")
 
     return companies
 
@@ -129,15 +105,13 @@ def extract_company_data(token, limit, offset):
         f'fields name; limit {limit}; offset {offset};'
     )
 
-    companies = []
     response = requests.post('https://api.igdb.com/v4/companies', headers=headers, data=data)
     if response.status_code == 429:
         print("Rate limit hit, sleeping for 1 second.")
         time.sleep(1)
     response.raise_for_status()
-    result = response.json()
+    companies = response.json()
     print("adding company...")
-    companies.extend(result)
 
     return companies
 
@@ -226,25 +200,25 @@ def main():
     print("Extracting and transforming game data...")
     games = extract_all_games()
     games_df = pd.DataFrame(games)
-    load_data_to_azure(games_df, 'GameData')
+    #load_data_to_azure(games_df, 'GameData')
     
     # Extract and load platform data 
     print("Extracting platform data...")
     platform_data = extract_platforms()
     platform_df = pd.DataFrame(platform_data)
-    load_data_to_azure(platform_df, 'PlatformData')
+    #load_data_to_azure(platform_df, 'PlatformData')
 
     # Extract and load theme data 
     print("Extracting theme data...")
     theme_data = extract_themes()
     theme_df = pd.DataFrame(theme_data)
-    load_data_to_azure(theme_df, 'ThemeData')
+    #load_data_to_azure(theme_df, 'ThemeData')
 
     # Extract and load company data
     print("Extracting company data...")
     company_data = extract_all_companies()
     company_df = pd.DataFrame(company_data)
-    load_data_to_azure(company_df, 'CompanyData')
+    #load_data_to_azure(company_df, 'CompanyData')
 
 
 if __name__ == "__main__":
