@@ -1,7 +1,6 @@
 import requests
 import os
 import pandas as pd
-import asyncio
 import time
 
 # IGDB API Credentials and Azure Credentials (set these in your environment variables)
@@ -13,7 +12,6 @@ account_key = os.getenv('AZURE_ACCOUNT_KEY')
 # URL for the IGDB API
 IGDB_URL = 'https://api.igdb.com/v4/games'
 # make sure we dont need this 
-asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 # Good
 def get_igdb_token():

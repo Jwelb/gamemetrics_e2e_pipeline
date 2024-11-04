@@ -4,7 +4,7 @@ from datetime import datetime,timedelta
 import os 
 import sys
 
-sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../pipeline')))
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../pipelines')))
 
 from game_pipeline import extract_data,load_data
 # Implement Task Flow Later refer to https://airflow.apache.org/docs/apache-airflow/stable/core-concepts/taskflow.html
@@ -19,7 +19,7 @@ default_args = {
 dag = DAG(
     dag_id= 'etl_game_pipeline',
     default_args=default_args,
-    schedule_interval='@Weekly',
+    schedule_interval='@weekly',
     catchup=False,
     tags=['data', 'etl', 'pipeline']
 )
@@ -40,6 +40,5 @@ load = PythonOperator(
     task_id = 'steam_load',
     python_callable = load_data,
     execution_timeout=timedelta(seconds=60),
-    op_kwargs={'games_df': '{{ task_instance.xcom_pull(task_ids="game_extraction") }}'},
     dag=dag
 )

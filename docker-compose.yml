@@ -36,7 +36,7 @@ services:
       - postgres_data:/var/lib/postgresql/data # Added volume for Postgres data
   redis:
     image: redis:latest
-    ports: 
+    ports:
       - "6379:6379"
 
   airflow-init:
