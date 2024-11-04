@@ -144,47 +144,6 @@ def extract_themes():
     response.raise_for_status()
     return response.json()
 
-# All these loading functions will need to be configured to one function to load in Azure Storage container. Reference the added_functions.py
-def load_Gamedata_to_csv(data: pd.DataFrame):
-    """Loads the transformed data to a CSV file."""
-    if data.empty:
-        print("No data to save.")
-        return
-    file_name = f'GameData.csv'
-    print(f"Saving to {file_name}")
-    data.to_csv(file_name, index=False)
-
-def load_Platformdata_to_csv(data: pd.DataFrame):
-    """Loads the transformed data to a CSV file."""
-    if data.empty:
-        print("No data to save.")
-        return
-
-    file_name = f'PlatformData.csv'
-    print(f"Saving to {file_name}")
-    data.to_csv(file_name, index=False)
-
-def load_Companydata_to_csv(data: pd.DataFrame):
-    """Loads the transformed data to a CSV file."""
-    if data.empty:
-        print("No data to save.")
-        return
-
-    file_name = f'CompanyData.csv'
-    print(f"Saving to {file_name}")
-    data.to_csv(file_name, index=False)
-
-def load_Themedata_to_csv(data: pd.DataFrame):
-    """Loads the transformed data to a CSV file."""
-    if data.empty:
-        print("No data to save.")
-        return
-
-    file_name = f'ThemeData_.csv'
-    print(f"Saving to {file_name}")
-    data.to_csv(file_name, index=False)
-
-
 # Need the account name and account key from environment variables
 def load_data_to_azure(data: pd.DataFrame, filename: str):
     file_name = (f'{filename}'+ '.csv')
