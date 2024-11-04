@@ -1,13 +1,6 @@
-# To explain this file is to iniate the pipeline with different functions. We will create these functions in the ETL. 
-# ETL != Pipleine but rather we do all of our logic and data in the ETL file. 
-
-# What we need to do is create functions that enable this
-# 1. 
 import sys
 import os
 import pandas as pd
-print(__file__)
-print(sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../etls'))))
 
 from game_etl import extract_platforms,extract_themes,extract_all_companies, extract_all_games, load_data_to_azure
 
@@ -15,7 +8,7 @@ from game_etl import extract_platforms,extract_themes,extract_all_companies, ext
 def extract_data():
     """Main function to orchestrate the extraction, transformation, and loading process."""
     # Extract game data
-    print("Extracting and transforming game data...")
+    print("Extracting game data...")
     games = extract_all_games()
     games_df = pd.DataFrame(games)
     game_path = '/opt/airflow/data/GameData.csv'
@@ -45,13 +38,10 @@ def extract_data():
 
 def load_data():
     sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../data')))
-    print("Current Working Directory:", os.getcwd())
-
     game_path = '/opt/airflow/data/GameData.csv'
     platform_path = '/opt/airflow/data/PlatformData.csv'
     theme_path = '/opt/airflow/data/ThemeData.csv'
     company_path = '/opt/airflow/data/CompanyData.csv'
-
     games_df = pd.read_csv(game_path)
     platform_df = pd.read_csv(platform_path)
     theme_df = pd.read_csv(theme_path)

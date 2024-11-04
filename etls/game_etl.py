@@ -6,16 +6,8 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from utils.constants import CLIENT_ID,SECRET,AZURE_STORAGE,AZURE_KEY
-# IGDB API Credentials and Azure Credentials (set these in your environment variables)
-client_id = os.getenv('Client_Id')
-client_secret = os.getenv('Client_secret')
-account_name = os.getenv('AZURE_STORAGE_ACCOUNT')
-account_key = os.getenv('AZURE_ACCOUNT_KEY')
-
-# URL for the IGDB API
 IGDB_URL = 'https://api.igdb.com/v4/games'
 
-# Good
 def get_igdb_token():
     """Authenticate with IGDB and retrieve the access token."""
     auth_url = 'https://id.twitch.tv/oauth2/token'
@@ -28,7 +20,6 @@ def get_igdb_token():
     response.raise_for_status()
     return response.json()['access_token']
 
-# Good
 def extract_games(token, limit, offset):
     """Extracts game data from the IGDB API with pagination."""
     headers = {
@@ -54,7 +45,6 @@ def extract_games(token, limit, offset):
 
     return games_data
 
-# Good
 def extract_all_games():
     """Extracts all games using pagination."""
     token = get_igdb_token()
@@ -73,7 +63,6 @@ def extract_all_games():
 
     return games
 
-# BINGOOOO EXACTLY RIGHT
 def extract_all_companies():
     """Extracts all companies using pagination."""
     token = get_igdb_token()
@@ -91,8 +80,6 @@ def extract_all_companies():
 
     return companies
 
-
-# BINGOOOOO EXACTLY RIGHT
 def extract_company_data(token, limit, offset):
     """Extracts company data from the IGDB API with pagination."""
     headers = {
@@ -114,7 +101,6 @@ def extract_company_data(token, limit, offset):
 
     return companies
 
-# Good
 def extract_platforms():
     """Extract platform data from IGDB."""
     token = get_igdb_token()
@@ -151,39 +137,4 @@ def load_data_to_azure(data: pd.DataFrame, filename: str):
         'account_name': AZURE_STORAGE,
         'account_key' : AZURE_KEY}, index=False
     )
-
-# need to delete this if DAG works
-def main():
-    """Main function to orchestrate the extraction, transformation, and loading process."""
-
-    # Extract and load game data
-    print("Extracting and transforming game data...")
-    games = extract_all_games()
-    games_df = pd.DataFrame(games)
-    #load_data_to_azure(games_df, 'GameData')
-    
-    # Extract and load platform data 
-    print("Extracting platform data...")
-    platform_data = extract_platforms()
-    platform_df = pd.DataFrame(platform_data)
-    #load_data_to_azure(platform_df, 'PlatformData')
-
-    # Extract and load theme data 
-    print("Extracting theme data...")
-    theme_data = extract_themes()
-    theme_df = pd.DataFrame(theme_data)
-    #load_data_to_azure(theme_df, 'ThemeData')
-
-    # Extract and load company data
-    print("Extracting company data...")
-    company_data = extract_all_companies()
-    company_df = pd.DataFrame(company_data)
-    #load_data_to_azure(company_df, 'CompanyData')
-
-
-if __name__ == "__main__":
-    try:
-        main()
-    except Exception as e:
-        print(f"An error occurred: {e}")
 
