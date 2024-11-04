@@ -2,16 +2,17 @@ import requests
 import os
 import pandas as pd
 import asyncio
-import aiohttp
 import time
-from datetime import datetime
 
-# IGDB API Credentials (set these in your environment variables)
+# IGDB API Credentials and Azure Credentials (set these in your environment variables)
 client_id = os.getenv('Client_Id')
 client_secret = os.getenv('Client_secret')
+account_name = os.getenv('AZURE_STORAGE_ACCOUNT')
+account_key = os.getenv('AZURE_ACCOUNT_KEY')
 
 # URL for the IGDB API
 IGDB_URL = 'https://api.igdb.com/v4/games'
+# make sure we dont need this 
 asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
 # Good
@@ -175,7 +176,6 @@ def load_Gamedata_to_csv(data: pd.DataFrame):
     if data.empty:
         print("No data to save.")
         return
-
     file_name = f'GameData.csv'
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
@@ -210,46 +210,45 @@ def load_Themedata_to_csv(data: pd.DataFrame):
     print(f"Saving to {file_name}")
     data.to_csv(file_name, index=False)
 
-def extract_gamesdf():
-    """Combines extraction and transformation."""
-    games = extract_all_games()
-    games_df = pd.DataFrame(games)
-    return games_df
 
+# Need the account name and account key from environment variables
+def load_data_to_azure(data: pd.DataFrame, filename: str):
+    file_name = (f'{filename}'+ '.csv')
+    data.to_csv(account_name + file_name, storage_options={
+        'account_key' : account_key}, index=False
+    )
 
+# need to delete this if DAG works
 def main():
     """Main function to orchestrate the extraction, transformation, and loading process."""
 
-    # Extract and transform game data asynchronously
+    # Extract and load game data
     print("Extracting and transforming game data...")
-    games_df = extract_gamesdf()
-    load_Gamedata_to_csv(games_df)
-    # Load game data to CSV if there is data
-    #if not games_df.empty:
-        #load_Gamedata_to_csv(games_df)
-
-    # Extract and load platform data (regular function)
+    games = extract_all_games()
+    games_df = pd.DataFrame(games)
+    load_data_to_azure(games_df, 'GameData')
+    
+    # Extract and load platform data 
     print("Extracting platform data...")
     platform_data = extract_platforms()
     platform_df = pd.DataFrame(platform_data)
-    load_Platformdata_to_csv(platform_df)
+    load_data_to_azure(platform_df, 'PlatformData')
 
-    # Extract and load theme data (regular function)
+    # Extract and load theme data 
     print("Extracting theme data...")
     theme_data = extract_themes()
     theme_df = pd.DataFrame(theme_data)
-    load_Themedata_to_csv(theme_df)
+    load_data_to_azure(theme_df, 'ThemeData')
 
-    # Extract and load company data asynchronously
+    # Extract and load company data
     print("Extracting company data...")
     company_data = extract_all_companies()
-    company_df = pd.json_normalize(company_data)
-    load_Companydata_to_csv(company_df)
+    company_df = pd.DataFrame(company_data)
+    load_data_to_azure(company_df, 'CompanyData')
 
-# Entry point to run async code
+
 if __name__ == "__main__":
     try:
-        # Use asyncio.run() to call the main async function
         main()
     except Exception as e:
         print(f"An error occurred: {e}")
