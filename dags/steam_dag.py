@@ -37,3 +37,5 @@ load = PythonOperator(
     execution_timeout=timedelta(seconds=60),
     dag=dag
 )
+
+extract >> load

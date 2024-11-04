@@ -1,0 +1,216 @@
+,id,name
+0,62,Atari Jaguar
+1,477,Panasonic Jungle
+2,504,Uzebox
+3,148,AY-3-8607
+4,65,Atari 8-bit
+5,128,PC Engine SuperGrafx
+6,89,Microvision
+7,8,PlayStation 2
+8,6,PC (Microsoft Windows)
+9,23,Dreamcast
+10,35,Sega Game Gear
+11,44,Tapwave Zodiac
+12,88,Odyssey
+13,94,Commodore Plus/4
+14,123,WonderSwan Color
+15,134,Acorn Electron
+16,129,Texas Instruments TI-99
+17,133,Odyssey 2 / Videopac G7000
+18,135,Hyper Neo Geo 64
+19,136,Neo Geo CD
+20,142,PC-50X Family
+21,144,AY-3-8710
+22,146,AY-3-8605
+23,147,AY-3-8606
+24,149,PC-9800 Series
+25,150,Turbografx-16/PC Engine CD
+26,505,Elektor TV Games Computer
+27,156,Thomson MO5
+28,158,Commodore CDTV
+29,163,SteamVR
+30,237,Sol-20
+31,13,DOS
+32,24,Game Boy Advance
+33,30,Sega 32X
+34,85,Donner Model 30
+35,119,Neo Geo Pocket
+36,41,Wii U
+37,53,MSX2
+38,140,AY-3-8500
+39,143,AY-3-8760
+40,60,Atari 7800
+41,70,Vectrex
+42,145,AY-3-8603
+43,77,Sharp X1
+44,78,Sega CD
+45,87,Virtual Boy
+46,97,PDP-8
+47,98,DEC GT40
+48,101,Ferranti Nimrod Computer
+49,108,PDP-11
+50,109,CDC Cyber 70
+51,112,Microcomputer
+52,113,OnLive Game System
+53,115,Apple IIGS
+54,120,Neo Geo Pocket Color
+55,124,SwanCrystal
+56,125,PC-8800 Series
+57,127,Fairchild Channel F
+58,132,Amazon Fire TV
+59,138,VC 4000
+60,139,1292 Advanced Programmable Video System
+61,153,Dragon 32/64
+62,154,Amstrad PCW
+63,155,Tatung Einstein
+64,306,Satellaview
+65,307,Game & Watch
+66,308,Playdia
+67,131,Super NES CD-ROM System
+68,9,PlayStation 3
+69,61,Atari Lynx
+70,11,Xbox
+71,15,Commodore C64/128/MAX
+72,18,Nintendo Entertainment System
+73,66,Atari 5200
+74,111,Imlac PDS-1
+75,22,Game Boy Color
+76,32,Sega Saturn
+77,46,PlayStation Vita
+78,67,Intellivision
+79,73,BlackBerry OS
+80,86,TurboGrafx-16/PC Engine
+81,114,Amiga CD32
+82,116,Acorn Archimedes
+83,117,Philips CD-i
+84,118,FM Towns
+85,121,Sharp X68000
+86,122,Nuon
+87,141,AY-3-8610
+88,152,FM-7
+89,157,NEC PC-6000 Series
+90,162,Oculus VR
+91,20,Nintendo DS
+92,57,WonderSwan
+93,69,BBC Microcomputer System
+94,71,Commodore VIC-20
+95,339,Sega Pico
+96,379,Game.com
+97,382,Intellivision Amico
+98,387,Oculus Go
+99,374,Sharp MZ-2200
+100,74,Windows Phone
+101,79,Neo Geo MVS
+102,388,Gear VR
+103,80,Neo Geo AES
+104,375,Epoch Cassette Vision
+105,376,Epoch Super Cassette Vision
+106,84,SG-1000
+107,91,Bally Astrocade
+108,170,Google Stadia
+109,377,Plug & Play
+110,384,Oculus Quest
+111,385,Oculus Rift
+112,21,Nintendo GameCube
+113,33,Game Boy
+114,42,N-Gage
+115,93,Commodore 16
+116,96,PDP-10
+117,161,Windows Mixed Reality
+118,479,Terebikko / See 'n Say Video Phone
+119,167,PlayStation 5
+120,50,3DO Interactive Multiplayer
+121,137,New Nintendo 3DS
+122,64,Sega Master System/Mark III
+123,274,PC-FX
+124,309,Evercade
+125,381,Playdate
+126,95,PDP-1
+127,110,PLATO
+128,372,OOParts
+129,378,Gamate
+130,380,Casio Loopy
+131,100,Analogue electronics
+132,478,Panasonic M2
+133,236,Exidy Sorcerer
+134,26,ZX Spectrum
+135,102,EDSAC
+136,103,PDP-7
+137,27,MSX
+138,104,HP 2100
+139,166,Pokémon mini
+140,105,HP 3000
+141,106,SDS Sigma 7
+142,37,Nintendo 3DS
+143,38,PlayStation Portable
+144,107,Call-A-Computer time-shared mainframe computer system
+145,151,TRS-80 Color Computer
+146,164,Daydream
+147,169,Xbox Series X|S
+148,203,DUPLICATE Stadia
+149,238,DVD Player
+150,239,Blu-ray Player
+151,240,Zeebo
+152,386,Meta Quest 2
+153,99,Family Computer
+154,165,PlayStation VR
+155,405,Windows Mobile
+156,389,AirConsole
+157,390,PlayStation VR2
+158,406,Sinclair QL
+159,407,HyperScan
+160,408,Mega Duck/Cougar Boy
+161,410,Atari Jaguar CD
+162,411,Handheld Electronic LCD
+163,409,Legacy Computer
+164,412,Leapster
+165,414,LeapTV
+166,413,Leapster Explorer/LeadPad Explorer
+167,438,Arduboy
+168,415,Watara/QuickShot Supervision
+169,439,V.Smile
+170,441,PocketStation
+171,417,Palm OS
+172,7,PlayStation
+173,416,64DD
+174,16,Amiga
+175,471,Meta Quest 3
+176,480,Super A'Can
+177,47,Virtual Console
+178,440,Visual Memory Unit / Visual Memory System
+179,472,visionOS
+180,473,Arcadia 2001
+181,51,Family Computer Disk System
+182,474,Gizmondo
+183,25,Amstrad CPC
+184,52,Arcade
+185,29,Sega Mega Drive/Genesis
+186,59,Atari 2600
+187,68,ColecoVision
+188,475,R-Zone
+189,476,Apple Pippin
+190,481,Tomy Tutor / Pyuta / Grandstand Tutor
+191,486,Digiblast
+192,48,PlayStation 4
+193,12,Xbox 360
+194,34,Android
+195,482,Sega CD 32X
+196,49,Xbox One
+197,3,Linux
+198,4,Nintendo 64
+199,55,Legacy Mobile Device
+200,5,Wii
+201,19,Super Nintendo Entertainment System
+202,39,iOS
+203,58,Super Famicom
+204,63,Atari ST/STE
+205,75,Apple II
+206,82,Web browser
+207,90,Commodore PET
+208,126,TRS-80
+209,159,Nintendo DSi
+210,487,LaserActive
+211,14,Mac
+212,373,Sinclair ZX81
+213,72,Ouya
+214,130,Nintendo Switch

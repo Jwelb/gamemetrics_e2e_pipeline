@@ -1,0 +1,584 @@
+[2024-11-04T18:19:43.630+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T18:19:41.833962+00:00 [queued]>
+[2024-11-04T18:19:43.647+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T18:19:41.833962+00:00 [queued]>
+[2024-11-04T18:19:43.649+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2024-11-04T18:19:43.671+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): game_extraction> on 2024-11-04 18:19:41.833962+00:00
+[2024-11-04T18:19:43.682+0000] {standard_task_runner.py:57} INFO - Started process 59 to run task
+[2024-11-04T18:19:43.686+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'etl_game_pipeline', 'game_extraction', 'manual__2024-11-04T18:19:41.833962+00:00', '--job-id', '41', '--raw', '--subdir', 'DAGS_FOLDER/steam_dag.py', '--cfg-path', '/tmp/tmp8pacik1z']
+[2024-11-04T18:19:43.702+0000] {standard_task_runner.py:85} INFO - Job 41: Subtask game_extraction
+[2024-11-04T18:19:43.790+0000] {task_command.py:415} INFO - Running <TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T18:19:41.833962+00:00 [running]> on host f6d6761c5673
+[2024-11-04T18:19:44.059+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jordan Welborn' AIRFLOW_CTX_DAG_ID='etl_game_pipeline' AIRFLOW_CTX_TASK_ID='game_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-11-04T18:19:41.833962+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-04T18:19:41.833962+00:00'
+[2024-11-04T18:19:44.061+0000] {logging_mixin.py:151} INFO - Extracting and transforming game data...
+[2024-11-04T18:19:44.707+0000] {logging_mixin.py:151} INFO - sncy6owdxvnz8dohqral2avyfaq76x
+[2024-11-04T18:19:45.151+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:45.153+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 500
+[2024-11-04T18:19:45.620+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:45.621+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 1000
+[2024-11-04T18:19:46.120+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:46.121+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 1500
+[2024-11-04T18:19:46.435+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:46.437+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 2000
+[2024-11-04T18:19:46.939+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:46.941+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 2500
+[2024-11-04T18:19:47.397+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:47.399+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 3000
+[2024-11-04T18:19:48.533+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:48.535+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 3500
+[2024-11-04T18:19:48.902+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:48.903+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 4000
+[2024-11-04T18:19:49.495+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:49.497+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 4500
+[2024-11-04T18:19:49.871+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:49.872+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 5000
+[2024-11-04T18:19:50.285+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:50.286+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 5500
+[2024-11-04T18:19:50.714+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:50.715+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 6000
+[2024-11-04T18:19:51.227+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:51.228+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 6500
+[2024-11-04T18:19:51.672+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:51.674+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 7000
+[2024-11-04T18:19:51.997+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:51.998+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 7500
+[2024-11-04T18:19:52.395+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:52.396+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 8000
+[2024-11-04T18:19:52.914+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:52.915+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 8500
+[2024-11-04T18:19:53.620+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:53.622+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 9000
+[2024-11-04T18:19:54.039+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:54.040+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 9500
+[2024-11-04T18:19:54.448+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:54.450+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 10000
+[2024-11-04T18:19:54.857+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:54.858+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 10500
+[2024-11-04T18:19:55.242+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:55.243+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 11000
+[2024-11-04T18:19:55.756+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:55.757+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 11500
+[2024-11-04T18:19:56.228+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:56.230+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 12000
+[2024-11-04T18:19:56.664+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:56.665+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 12500
+[2024-11-04T18:19:57.002+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:57.003+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 13000
+[2024-11-04T18:19:57.405+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:57.406+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 13500
+[2024-11-04T18:19:57.742+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:57.744+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 14000
+[2024-11-04T18:19:58.334+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:58.349+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 14500
+[2024-11-04T18:19:58.778+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:58.780+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 15000
+[2024-11-04T18:19:59.377+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:59.378+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 15500
+[2024-11-04T18:19:59.833+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:19:59.835+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 16000
+[2024-11-04T18:20:00.267+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:00.269+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 16500
+[2024-11-04T18:20:00.597+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:00.598+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 17000
+[2024-11-04T18:20:00.932+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:00.934+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 17500
+[2024-11-04T18:20:01.488+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:01.489+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 18000
+[2024-11-04T18:20:02.038+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:02.039+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 18500
+[2024-11-04T18:20:02.511+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:02.512+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 19000
+[2024-11-04T18:20:02.927+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:02.929+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 19500
+[2024-11-04T18:20:03.549+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:03.551+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 20000
+[2024-11-04T18:20:03.954+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:03.956+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 20500
+[2024-11-04T18:20:04.519+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:04.521+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 21000
+[2024-11-04T18:20:04.877+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:04.878+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 21500
+[2024-11-04T18:20:05.564+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:05.566+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 22000
+[2024-11-04T18:20:05.981+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:05.982+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 22500
+[2024-11-04T18:20:06.312+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:06.314+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 23000
+[2024-11-04T18:20:06.738+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:06.740+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 23500
+[2024-11-04T18:20:07.164+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:07.166+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 24000
+[2024-11-04T18:20:07.716+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:07.718+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 24500
+[2024-11-04T18:20:08.121+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:08.122+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 25000
+[2024-11-04T18:20:08.621+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:08.623+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 25500
+[2024-11-04T18:20:09.069+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:09.070+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 26000
+[2024-11-04T18:20:09.811+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:09.813+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 26500
+[2024-11-04T18:20:10.196+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:10.198+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 27000
+[2024-11-04T18:20:10.663+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:10.664+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 27500
+[2024-11-04T18:20:11.068+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:11.070+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 28000
+[2024-11-04T18:20:11.715+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:11.716+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 28500
+[2024-11-04T18:20:12.283+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:12.285+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 29000
+[2024-11-04T18:20:12.843+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:12.844+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 29500
+[2024-11-04T18:20:13.296+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:13.298+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 30000
+[2024-11-04T18:20:13.769+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:13.771+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 30500
+[2024-11-04T18:20:14.145+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:14.146+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 31000
+[2024-11-04T18:20:14.606+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:14.608+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 31500
+[2024-11-04T18:20:15.121+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:15.123+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 32000
+[2024-11-04T18:20:15.560+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:15.561+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 32500
+[2024-11-04T18:20:15.931+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:15.933+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 33000
+[2024-11-04T18:20:16.280+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:16.281+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 33500
+[2024-11-04T18:20:16.770+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:16.771+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 34000
+[2024-11-04T18:20:17.276+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:17.278+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 34500
+[2024-11-04T18:20:17.729+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:17.730+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 35000
+[2024-11-04T18:20:18.200+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:18.202+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 35500
+[2024-11-04T18:20:18.684+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:18.686+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 36000
+[2024-11-04T18:20:19.159+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:19.161+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 36500
+[2024-11-04T18:20:19.702+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:19.704+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 37000
+[2024-11-04T18:20:20.069+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:20.071+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 37500
+[2024-11-04T18:20:20.437+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:20.439+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 38000
+[2024-11-04T18:20:20.800+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:20.802+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 38500
+[2024-11-04T18:20:21.194+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:21.196+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 39000
+[2024-11-04T18:20:21.642+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:21.643+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 39500
+[2024-11-04T18:20:22.134+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:22.136+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 40000
+[2024-11-04T18:20:22.736+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:22.737+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 40500
+[2024-11-04T18:20:23.170+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:23.172+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 41000
+[2024-11-04T18:20:23.709+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:23.711+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 41500
+[2024-11-04T18:20:24.168+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:24.169+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 42000
+[2024-11-04T18:20:24.622+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:24.623+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 42500
+[2024-11-04T18:20:25.014+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:25.015+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 43000
+[2024-11-04T18:20:25.454+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:25.455+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 43500
+[2024-11-04T18:20:25.959+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:25.960+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 44000
+[2024-11-04T18:20:26.401+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:26.403+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 44500
+[2024-11-04T18:20:26.762+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:26.763+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 45000
+[2024-11-04T18:20:27.237+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:27.238+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 45500
+[2024-11-04T18:20:27.682+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:27.684+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 46000
+[2024-11-04T18:20:28.184+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:28.185+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 46500
+[2024-11-04T18:20:28.623+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:28.626+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 47000
+[2024-11-04T18:20:29.084+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:29.086+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 47500
+[2024-11-04T18:20:29.518+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:29.520+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 48000
+[2024-11-04T18:20:30.032+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:30.033+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 48500
+[2024-11-04T18:20:30.465+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:30.466+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 49000
+[2024-11-04T18:20:30.958+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:30.960+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 49500
+[2024-11-04T18:20:31.525+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:31.527+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 50000
+[2024-11-04T18:20:32.024+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:32.025+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 50500
+[2024-11-04T18:20:32.449+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:32.451+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 51000
+[2024-11-04T18:20:32.920+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:32.922+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 51500
+[2024-11-04T18:20:33.349+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:33.351+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 52000
+[2024-11-04T18:20:33.780+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:33.781+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 52500
+[2024-11-04T18:20:34.185+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:34.187+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 53000
+[2024-11-04T18:20:34.653+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:34.654+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 53500
+[2024-11-04T18:20:35.059+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:35.060+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 54000
+[2024-11-04T18:20:35.819+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:35.821+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 54500
+[2024-11-04T18:20:36.269+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:36.271+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 55000
+[2024-11-04T18:20:36.713+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:36.715+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 55500
+[2024-11-04T18:20:37.195+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:37.196+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 56000
+[2024-11-04T18:20:37.634+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:37.636+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 56500
+[2024-11-04T18:20:38.188+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:38.189+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 57000
+[2024-11-04T18:20:38.528+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:38.530+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 57500
+[2024-11-04T18:20:38.901+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:38.903+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 58000
+[2024-11-04T18:20:39.292+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:39.293+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 58500
+[2024-11-04T18:20:39.714+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:39.716+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 59000
+[2024-11-04T18:20:40.179+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:40.180+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 59500
+[2024-11-04T18:20:40.524+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:40.525+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 60000
+[2024-11-04T18:20:40.948+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:40.949+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 60500
+[2024-11-04T18:20:41.357+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:41.358+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 61000
+[2024-11-04T18:20:41.805+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:41.807+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 61500
+[2024-11-04T18:20:42.185+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:42.186+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 62000
+[2024-11-04T18:20:42.752+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:42.753+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 62500
+[2024-11-04T18:20:43.133+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:43.135+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 63000
+[2024-11-04T18:20:43.500+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:43.502+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 63500
+[2024-11-04T18:20:43.984+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:43.985+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 64000
+[2024-11-04T18:20:44.440+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:44.441+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 64500
+[2024-11-04T18:20:44.964+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:44.966+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 65000
+[2024-11-04T18:20:45.415+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:45.417+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 65500
+[2024-11-04T18:20:45.870+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:45.872+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 66000
+[2024-11-04T18:20:46.344+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:46.345+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 66500
+[2024-11-04T18:20:46.819+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:46.821+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 67000
+[2024-11-04T18:20:47.324+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:47.325+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 67500
+[2024-11-04T18:20:47.781+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:47.782+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 68000
+[2024-11-04T18:20:48.314+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:48.316+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 68500
+[2024-11-04T18:20:48.745+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:48.747+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 69000
+[2024-11-04T18:20:49.193+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:49.194+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 69500
+[2024-11-04T18:20:49.658+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:49.660+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 70000
+[2024-11-04T18:20:50.233+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:50.234+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 70500
+[2024-11-04T18:20:50.788+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:50.790+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 71000
+[2024-11-04T18:20:51.178+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:51.181+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 71500
+[2024-11-04T18:20:51.564+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:51.566+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 72000
+[2024-11-04T18:20:51.917+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:51.919+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 72500
+[2024-11-04T18:20:52.298+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:52.299+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 73000
+[2024-11-04T18:20:52.706+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:52.707+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 73500
+[2024-11-04T18:20:53.150+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:53.152+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 74000
+[2024-11-04T18:20:53.722+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:53.724+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 74500
+[2024-11-04T18:20:54.153+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:54.155+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 75000
+[2024-11-04T18:20:54.714+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:54.716+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 75500
+[2024-11-04T18:20:55.078+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:55.079+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 76000
+[2024-11-04T18:20:55.502+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:55.504+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 76500
+[2024-11-04T18:20:55.928+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:55.929+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 77000
+[2024-11-04T18:20:56.480+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:56.481+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 77500
+[2024-11-04T18:20:56.909+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:56.910+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 78000
+[2024-11-04T18:20:57.277+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:57.278+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 78500
+[2024-11-04T18:20:57.818+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:57.820+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 79000
+[2024-11-04T18:20:58.259+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:58.261+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 79500
+[2024-11-04T18:20:58.628+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:58.630+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 80000
+[2024-11-04T18:20:59.131+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:59.132+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 80500
+[2024-11-04T18:20:59.567+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:20:59.568+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 81000
+[2024-11-04T18:21:00.009+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:00.010+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 81500
+[2024-11-04T18:21:00.374+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:00.376+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 82000
+[2024-11-04T18:21:00.781+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:00.782+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 82500
+[2024-11-04T18:21:01.263+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:01.265+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 83000
+[2024-11-04T18:21:01.788+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:01.790+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 83500
+[2024-11-04T18:21:02.401+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:02.403+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 84000
+[2024-11-04T18:21:02.849+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:02.851+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 84500
+[2024-11-04T18:21:03.247+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:03.248+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 85000
+[2024-11-04T18:21:03.692+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:03.693+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 85500
+[2024-11-04T18:21:04.165+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:04.166+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 86000
+[2024-11-04T18:21:04.677+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:04.678+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 86500
+[2024-11-04T18:21:05.092+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:05.094+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 87000
+[2024-11-04T18:21:05.761+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:05.763+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 87500
+[2024-11-04T18:21:06.164+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:06.166+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 88000
+[2024-11-04T18:21:06.706+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:06.707+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 88500
+[2024-11-04T18:21:07.077+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:07.079+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 89000
+[2024-11-04T18:21:07.602+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:07.604+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 89500
+[2024-11-04T18:21:08.123+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:08.125+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 90000
+[2024-11-04T18:21:08.574+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:08.576+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 90500
+[2024-11-04T18:21:09.030+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:09.032+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 91000
+[2024-11-04T18:21:09.593+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:09.595+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 91500
+[2024-11-04T18:21:10.018+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:10.019+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 92000
+[2024-11-04T18:21:10.505+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:10.507+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 92500
+[2024-11-04T18:21:10.928+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:10.929+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 93000
+[2024-11-04T18:21:11.336+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:11.338+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 93500
+[2024-11-04T18:21:11.702+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:11.707+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 94000
+[2024-11-04T18:21:12.287+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:12.288+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 94500
+[2024-11-04T18:21:12.692+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:12.694+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 95000
+[2024-11-04T18:21:13.149+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:13.150+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 95500
+[2024-11-04T18:21:13.635+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:13.636+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 96000
+[2024-11-04T18:21:14.050+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:14.051+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 96500
+[2024-11-04T18:21:14.587+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:14.589+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 97000
+[2024-11-04T18:21:15.091+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:15.092+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 97500
+[2024-11-04T18:21:15.639+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:15.641+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 98000
+[2024-11-04T18:21:16.084+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:16.085+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 98500
+[2024-11-04T18:21:16.680+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:16.682+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 99000
+[2024-11-04T18:21:17.131+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:17.133+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 99500
+[2024-11-04T18:21:17.654+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:17.656+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 100000
+[2024-11-04T18:21:18.077+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:18.079+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 100500
+[2024-11-04T18:21:18.472+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:18.474+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 101000
+[2024-11-04T18:21:18.935+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:18.937+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 101500
+[2024-11-04T18:21:19.452+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:19.454+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 102000
+[2024-11-04T18:21:19.836+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:19.838+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 102500
+[2024-11-04T18:21:20.373+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:20.374+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 103000
+[2024-11-04T18:21:20.735+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:20.736+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 103500
+[2024-11-04T18:21:21.251+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:21.252+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 104000
+[2024-11-04T18:21:21.690+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:21.692+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 104500
+[2024-11-04T18:21:22.174+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:22.176+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 105000
+[2024-11-04T18:21:22.588+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:22.589+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 105500
+[2024-11-04T18:21:23.058+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:23.059+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 106000
+[2024-11-04T18:21:23.542+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:23.544+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 106500
+[2024-11-04T18:21:23.973+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:23.975+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 107000
+[2024-11-04T18:21:24.418+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:24.419+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 107500
+[2024-11-04T18:21:24.813+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:24.815+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 108000
+[2024-11-04T18:21:25.200+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:25.201+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 108500
+[2024-11-04T18:21:25.590+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:25.591+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 109000
+[2024-11-04T18:21:26.088+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:26.090+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 109500
+[2024-11-04T18:21:26.509+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:26.511+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 110000
+[2024-11-04T18:21:27.007+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:27.009+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 110500
+[2024-11-04T18:21:27.565+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:27.574+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 111000
+[2024-11-04T18:21:28.258+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:28.259+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 111500
+[2024-11-04T18:21:28.721+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:28.723+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 112000
+[2024-11-04T18:21:29.176+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:29.177+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 112500
+[2024-11-04T18:21:29.890+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:29.891+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 113000
+[2024-11-04T18:21:30.429+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:30.430+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 113500
+[2024-11-04T18:21:30.915+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:30.916+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 114000
+[2024-11-04T18:21:31.335+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:31.337+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 114500
+[2024-11-04T18:21:31.934+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:31.935+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 115000
+[2024-11-04T18:21:32.335+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:32.336+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 115500
+[2024-11-04T18:21:32.826+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:32.827+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 116000
+[2024-11-04T18:21:33.223+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:33.225+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 116500
+[2024-11-04T18:21:33.657+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:33.658+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 117000
+[2024-11-04T18:21:34.298+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:34.299+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 117500
+[2024-11-04T18:21:34.806+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:34.808+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 118000
+[2024-11-04T18:21:35.277+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:35.279+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 118500
+[2024-11-04T18:21:35.962+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:35.964+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 119000
+[2024-11-04T18:21:36.558+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:36.560+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 119500
+[2024-11-04T18:21:36.975+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:36.976+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 120000
+[2024-11-04T18:21:37.353+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:37.355+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 120500
+[2024-11-04T18:21:37.842+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:37.844+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 121000
+[2024-11-04T18:21:38.345+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:38.346+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 121500
+[2024-11-04T18:21:38.829+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:38.830+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 122000
+[2024-11-04T18:21:39.323+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:39.325+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 122500
+[2024-11-04T18:21:39.781+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:39.783+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 123000
+[2024-11-04T18:21:40.179+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:40.180+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 123500
+[2024-11-04T18:21:40.677+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:40.679+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 124000
+[2024-11-04T18:21:41.146+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:41.147+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 124500
+[2024-11-04T18:21:41.685+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:41.686+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 125000
+[2024-11-04T18:21:42.286+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:42.288+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 125500
+[2024-11-04T18:21:42.939+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:42.941+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 126000
+[2024-11-04T18:21:43.412+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:43.413+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 126500
+[2024-11-04T18:21:43.917+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:43.919+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 127000
+[2024-11-04T18:21:44.386+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:44.388+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 127500
+[2024-11-04T18:21:44.856+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:44.858+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 128000
+[2024-11-04T18:21:45.319+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:45.320+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 128500
+[2024-11-04T18:21:45.910+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:45.912+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 129000
+[2024-11-04T18:21:46.477+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:46.479+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 129500
+[2024-11-04T18:21:47.107+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:47.109+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 130000
+[2024-11-04T18:21:47.789+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:47.790+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 130500
+[2024-11-04T18:21:48.385+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:48.386+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 131000
+[2024-11-04T18:21:48.903+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:48.906+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 131500
+[2024-11-04T18:21:49.348+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:49.350+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 132000
+[2024-11-04T18:21:49.925+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:49.927+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 132500
+[2024-11-04T18:21:50.386+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:50.387+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 133000
+[2024-11-04T18:21:50.863+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:50.864+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 133500
+[2024-11-04T18:21:51.365+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:51.367+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 134000
+[2024-11-04T18:21:51.869+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:51.871+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 134500
+[2024-11-04T18:21:52.405+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:52.407+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 135000
+[2024-11-04T18:21:52.848+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:52.850+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 135500
+[2024-11-04T18:21:53.487+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:53.489+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 136000
+[2024-11-04T18:21:54.104+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:54.105+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 136500
+[2024-11-04T18:21:54.594+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:54.595+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 137000
+[2024-11-04T18:21:55.282+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:55.284+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 137500
+[2024-11-04T18:21:56.309+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:56.310+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 138000
+[2024-11-04T18:21:56.828+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:56.830+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 138500
+[2024-11-04T18:21:57.256+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:57.257+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 139000
+[2024-11-04T18:21:57.696+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:57.697+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 139500
+[2024-11-04T18:21:58.212+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:58.214+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 140000
+[2024-11-04T18:21:58.654+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:58.656+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 140500
+[2024-11-04T18:21:59.166+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:59.168+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 141000
+[2024-11-04T18:21:59.926+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:21:59.927+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 141500
+[2024-11-04T18:22:00.438+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:22:00.439+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 142000
+[2024-11-04T18:22:00.490+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-11-04T18:22:00.492+0000] {process_utils.py:131} INFO - Sending 15 to group 59. PIDs of all processes in the group: [59]
+[2024-11-04T18:22:00.492+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 59
+[2024-11-04T18:22:00.493+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-04T18:22:00.585+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=59, status='terminated', exitcode=0, started='18:19:43') (59) terminated with exit code 0

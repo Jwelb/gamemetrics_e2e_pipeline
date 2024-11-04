@@ -1,0 +1,232 @@
+[2024-11-04T15:35:38.011+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T15:25:20.862156+00:00 [queued]>
+[2024-11-04T15:35:38.019+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T15:25:20.862156+00:00 [queued]>
+[2024-11-04T15:35:38.020+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 2
+[2024-11-04T15:35:38.032+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): game_extraction> on 2024-11-04 15:25:20.862156+00:00
+[2024-11-04T15:35:38.037+0000] {standard_task_runner.py:57} INFO - Started process 57 to run task
+[2024-11-04T15:35:38.040+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'etl_game_pipeline', 'game_extraction', 'manual__2024-11-04T15:25:20.862156+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/steam_dag.py', '--cfg-path', '/tmp/tmpqnq_tcwy']
+[2024-11-04T15:35:38.043+0000] {standard_task_runner.py:85} INFO - Job 18: Subtask game_extraction
+[2024-11-04T15:35:38.087+0000] {task_command.py:415} INFO - Running <TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T15:25:20.862156+00:00 [running]> on host f6d6761c5673
+[2024-11-04T15:35:38.290+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jordan Welborn' AIRFLOW_CTX_DAG_ID='etl_game_pipeline' AIRFLOW_CTX_TASK_ID='game_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-11-04T15:25:20.862156+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-04T15:25:20.862156+00:00'
+[2024-11-04T15:35:38.291+0000] {logging_mixin.py:151} INFO - Extracting and transforming game data...
+[2024-11-04T15:35:38.950+0000] {logging_mixin.py:151} INFO - b6mdhh1vhobk2ldoshxoqhx32onx79
+[2024-11-04T15:35:39.428+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:39.431+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 500
+[2024-11-04T15:35:39.990+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:39.991+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 1000
+[2024-11-04T15:35:40.429+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:40.432+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 1500
+[2024-11-04T15:35:40.850+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:40.852+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 2000
+[2024-11-04T15:35:41.304+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:41.305+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 2500
+[2024-11-04T15:35:41.628+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:41.629+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 3000
+[2024-11-04T15:35:41.958+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:41.959+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 3500
+[2024-11-04T15:35:42.467+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:42.469+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 4000
+[2024-11-04T15:35:42.887+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:42.889+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 4500
+[2024-11-04T15:35:43.338+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:43.340+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 5000
+[2024-11-04T15:35:43.746+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:43.748+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 5500
+[2024-11-04T15:35:44.085+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:44.086+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 6000
+[2024-11-04T15:35:44.479+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:44.481+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 6500
+[2024-11-04T15:35:44.874+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:44.876+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 7000
+[2024-11-04T15:35:45.308+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:45.310+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 7500
+[2024-11-04T15:35:45.640+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:45.642+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 8000
+[2024-11-04T15:35:46.012+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:46.014+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 8500
+[2024-11-04T15:35:46.553+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:46.555+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 9000
+[2024-11-04T15:35:46.914+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:46.916+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 9500
+[2024-11-04T15:35:47.343+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:47.345+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 10000
+[2024-11-04T15:35:47.747+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:47.749+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 10500
+[2024-11-04T15:35:48.116+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:48.118+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 11000
+[2024-11-04T15:35:48.526+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:48.528+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 11500
+[2024-11-04T15:35:48.927+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:48.928+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 12000
+[2024-11-04T15:35:49.291+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:49.292+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 12500
+[2024-11-04T15:35:49.674+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:49.675+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 13000
+[2024-11-04T15:35:50.016+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:50.017+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 13500
+[2024-11-04T15:35:50.367+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:50.368+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 14000
+[2024-11-04T15:35:50.893+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:50.895+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 14500
+[2024-11-04T15:35:51.318+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:51.319+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 15000
+[2024-11-04T15:35:51.847+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:51.849+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 15500
+[2024-11-04T15:35:52.400+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:52.401+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 16000
+[2024-11-04T15:35:52.790+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:52.792+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 16500
+[2024-11-04T15:35:53.216+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:53.217+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 17000
+[2024-11-04T15:35:53.680+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:53.681+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 17500
+[2024-11-04T15:35:54.300+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:54.301+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 18000
+[2024-11-04T15:35:54.736+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:54.738+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 18500
+[2024-11-04T15:35:55.214+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:55.215+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 19000
+[2024-11-04T15:35:55.708+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:55.709+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 19500
+[2024-11-04T15:35:56.180+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:56.182+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 20000
+[2024-11-04T15:35:56.613+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:56.615+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 20500
+[2024-11-04T15:35:57.025+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:57.027+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 21000
+[2024-11-04T15:35:57.485+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:57.487+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 21500
+[2024-11-04T15:35:57.965+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:57.967+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 22000
+[2024-11-04T15:35:58.388+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:58.389+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 22500
+[2024-11-04T15:35:58.799+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:58.800+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 23000
+[2024-11-04T15:35:59.217+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:59.219+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 23500
+[2024-11-04T15:35:59.685+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:35:59.687+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 24000
+[2024-11-04T15:36:00.062+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:00.064+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 24500
+[2024-11-04T15:36:00.661+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:00.663+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 25000
+[2024-11-04T15:36:01.238+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:01.239+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 25500
+[2024-11-04T15:36:01.725+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:01.726+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 26000
+[2024-11-04T15:36:02.119+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:02.121+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 26500
+[2024-11-04T15:36:02.470+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:02.471+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 27000
+[2024-11-04T15:36:03.011+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:03.012+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 27500
+[2024-11-04T15:36:03.432+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:03.434+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 28000
+[2024-11-04T15:36:03.889+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:03.891+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 28500
+[2024-11-04T15:36:04.332+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:04.333+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 29000
+[2024-11-04T15:36:04.734+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:04.736+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 29500
+[2024-11-04T15:36:05.223+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:05.225+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 30000
+[2024-11-04T15:36:05.697+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:05.698+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 30500
+[2024-11-04T15:36:06.140+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:06.141+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 31000
+[2024-11-04T15:36:06.691+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:06.692+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 31500
+[2024-11-04T15:36:07.166+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:07.168+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 32000
+[2024-11-04T15:36:07.772+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:07.774+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 32500
+[2024-11-04T15:36:08.175+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:08.176+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 33000
+[2024-11-04T15:36:08.793+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:08.794+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 33500
+[2024-11-04T15:36:09.253+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:09.254+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 34000
+[2024-11-04T15:36:09.734+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:09.736+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 34500
+[2024-11-04T15:36:10.196+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:10.198+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 35000
+[2024-11-04T15:36:10.632+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:10.634+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 35500
+[2024-11-04T15:36:11.245+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:11.247+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 36000
+[2024-11-04T15:36:11.845+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:11.846+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 36500
+[2024-11-04T15:36:12.205+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:12.207+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 37000
+[2024-11-04T15:36:12.573+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:12.575+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 37500
+[2024-11-04T15:36:12.991+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:12.993+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 38000
+[2024-11-04T15:36:13.401+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:13.403+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 38500
+[2024-11-04T15:36:13.807+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:13.810+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 39000
+[2024-11-04T15:36:14.231+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:14.232+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 39500
+[2024-11-04T15:36:14.641+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:14.643+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 40000
+[2024-11-04T15:36:15.130+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:15.132+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 40500
+[2024-11-04T15:36:15.693+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:15.695+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 41000
+[2024-11-04T15:36:16.118+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:16.120+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 41500
+[2024-11-04T15:36:16.698+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:16.700+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 42000
+[2024-11-04T15:36:17.135+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:17.137+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 42500
+[2024-11-04T15:36:17.753+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:17.754+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 43000
+[2024-11-04T15:36:18.315+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:18.317+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 43500
+[2024-11-04T15:36:18.695+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:18.696+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 44000
+[2024-11-04T15:36:19.261+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:19.263+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 44500
+[2024-11-04T15:36:19.628+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:19.630+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 45000
+[2024-11-04T15:36:20.193+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:20.195+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 45500
+[2024-11-04T15:36:20.586+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:20.588+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 46000
+[2024-11-04T15:36:21.052+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:21.054+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 46500
+[2024-11-04T15:36:21.428+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:21.430+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 47000
+[2024-11-04T15:36:21.883+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:21.885+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 47500
+[2024-11-04T15:36:22.349+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:22.350+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 48000
+[2024-11-04T15:36:22.804+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:22.805+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 48500
+[2024-11-04T15:36:23.771+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:23.772+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 49000
+[2024-11-04T15:36:24.236+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:24.237+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 49500
+[2024-11-04T15:36:24.782+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:24.783+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 50000
+[2024-11-04T15:36:25.303+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:25.304+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 50500
+[2024-11-04T15:36:25.734+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:25.735+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 51000
+[2024-11-04T15:36:26.142+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:26.144+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 51500
+[2024-11-04T15:36:26.709+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:26.713+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 52000
+[2024-11-04T15:36:27.171+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:27.172+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 52500
+[2024-11-04T15:36:27.546+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:27.548+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 53000
+[2024-11-04T15:36:27.931+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:27.933+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 53500
+[2024-11-04T15:36:28.330+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T15:36:28.332+0000] {logging_mixin.py:151} INFO - Fetched 500 companies. Total so far: 54000
+[2024-11-04T15:36:28.606+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2024-11-04T15:36:28.608+0000] {process_utils.py:131} INFO - Sending 15 to group 57. PIDs of all processes in the group: [57]
+[2024-11-04T15:36:28.609+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 57
+[2024-11-04T15:36:28.609+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-04T15:36:28.661+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=57, status='terminated', exitcode=0, started='15:35:37') (57) terminated with exit code 0

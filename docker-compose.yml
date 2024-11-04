@@ -7,7 +7,6 @@ x-airflow-common: &airflow-common
   image: gamemetrics-airflow:2.7.1-python3.9
   env_file:
     - airflow.env
-    - azure.env
   volumes:
     - ./config:/opt/airflow/config
     - ./dags:/opt/airflow/dags
@@ -29,7 +28,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: airflow_reddit
+      POSTGRES_DB: airflow_game
     ports:
       - "5433:5432"
     volumes:

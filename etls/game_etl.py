@@ -2,7 +2,10 @@ import requests
 import os
 import pandas as pd
 import time
+import sys
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+from utils.constants import CLIENT_ID,SECRET,AZURE_STORAGE,AZURE_KEY
 # IGDB API Credentials and Azure Credentials (set these in your environment variables)
 client_id = os.getenv('Client_Id')
 client_secret = os.getenv('Client_secret')
@@ -11,27 +14,25 @@ account_key = os.getenv('AZURE_ACCOUNT_KEY')
 
 # URL for the IGDB API
 IGDB_URL = 'https://api.igdb.com/v4/games'
-# make sure we dont need this 
 
 # Good
 def get_igdb_token():
     """Authenticate with IGDB and retrieve the access token."""
     auth_url = 'https://id.twitch.tv/oauth2/token'
     params = {
-        'client_id': client_id,
-        'client_secret': client_secret,
+        'client_id': CLIENT_ID,
+        'client_secret': SECRET,
         'grant_type': 'client_credentials'
     }
     response = requests.post(auth_url, params=params)
     response.raise_for_status()
-    print(response.json()['access_token'])
     return response.json()['access_token']
 
 # Good
 def extract_games(token, limit, offset):
     """Extracts game data from the IGDB API with pagination."""
     headers = {
-        'Client-ID': client_id,
+        'Client-ID': CLIENT_ID,
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
@@ -67,7 +68,7 @@ def extract_all_games():
             break
         games.extend(game_data)
         offset += limit
-        print(f"Fetched {len(game_data)} companies. Total so far: {len(games)}")
+        print(f"Fetched {len(game_data)} games. Total so far: {len(games)}")
 
 
     return games
@@ -95,7 +96,7 @@ def extract_all_companies():
 def extract_company_data(token, limit, offset):
     """Extracts company data from the IGDB API with pagination."""
     headers = {
-        'Client-ID': client_id,
+        'Client-ID': CLIENT_ID,
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
@@ -119,7 +120,7 @@ def extract_platforms():
     token = get_igdb_token()
     url = 'https://api.igdb.com/v4/platforms'
     headers = {
-        'Client-ID': client_id,
+        'Client-ID': CLIENT_ID,
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
@@ -133,7 +134,7 @@ def extract_themes():
     token = get_igdb_token()
     url = 'https://api.igdb.com/v4/themes'
     headers = {
-        'Client-ID': client_id,
+        'Client-ID': CLIENT_ID,
         'Authorization': f'Bearer {token}',
         'Accept': 'application/json'
     }
@@ -142,11 +143,13 @@ def extract_themes():
     response.raise_for_status()
     return response.json()
 
-# Need the account name and account key from environment variables
+
 def load_data_to_azure(data: pd.DataFrame, filename: str):
     file_name = (f'{filename}'+ '.csv')
-    data.to_csv(account_name + file_name, storage_options={
-        'account_key' : account_key}, index=False
+    azure_file_path= f'abfs://steamdata/data/{file_name}'
+    data.to_csv(azure_file_path, storage_options={
+        'account_name': AZURE_STORAGE,
+        'account_key' : AZURE_KEY}, index=False
     )
 
 # need to delete this if DAG works
