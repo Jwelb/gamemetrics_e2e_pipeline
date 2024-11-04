@@ -6,7 +6,9 @@ import sys
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
 from utils.constants import CLIENT_ID,SECRET,AZURE_STORAGE,AZURE_KEY
+# URL for the IGDB API
 IGDB_URL = 'https://api.igdb.com/v4/games'
+
 
 def get_igdb_token():
     """Authenticate with IGDB and retrieve the access token."""
@@ -19,6 +21,7 @@ def get_igdb_token():
     response = requests.post(auth_url, params=params)
     response.raise_for_status()
     return response.json()['access_token']
+
 
 def extract_games(token, limit, offset):
     """Extracts game data from the IGDB API with pagination."""

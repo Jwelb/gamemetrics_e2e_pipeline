@@ -1,6 +1,7 @@
 import sys
 import os
 import pandas as pd
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../etls')))
 
 from game_etl import extract_platforms,extract_themes,extract_all_companies, extract_all_games, load_data_to_azure
 
@@ -42,6 +43,7 @@ def load_data():
     platform_path = '/opt/airflow/data/PlatformData.csv'
     theme_path = '/opt/airflow/data/ThemeData.csv'
     company_path = '/opt/airflow/data/CompanyData.csv'
+
     games_df = pd.read_csv(game_path)
     platform_df = pd.read_csv(platform_path)
     theme_df = pd.read_csv(theme_path)

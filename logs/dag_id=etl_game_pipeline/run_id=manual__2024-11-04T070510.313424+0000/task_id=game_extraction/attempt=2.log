@@ -1,0 +1,83 @@
+[2024-11-04T18:59:05.860+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T07:05:10.313424+00:00 [queued]>
+[2024-11-04T18:59:05.869+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T07:05:10.313424+00:00 [queued]>
+[2024-11-04T18:59:05.870+0000] {taskinstance.py:1359} INFO - Starting attempt 2 of 3
+[2024-11-04T18:59:05.890+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): game_extraction> on 2024-11-04 07:05:10.313424+00:00
+[2024-11-04T18:59:05.895+0000] {standard_task_runner.py:57} INFO - Started process 78 to run task
+[2024-11-04T18:59:05.897+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'etl_game_pipeline', 'game_extraction', 'manual__2024-11-04T07:05:10.313424+00:00', '--job-id', '46', '--raw', '--subdir', 'DAGS_FOLDER/steam_dag.py', '--cfg-path', '/tmp/tmpuanmaj_m']
+[2024-11-04T18:59:05.900+0000] {standard_task_runner.py:85} INFO - Job 46: Subtask game_extraction
+[2024-11-04T18:59:05.944+0000] {task_command.py:415} INFO - Running <TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T07:05:10.313424+00:00 [running]> on host f6d6761c5673
+[2024-11-04T18:59:06.153+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jordan Welborn' AIRFLOW_CTX_DAG_ID='etl_game_pipeline' AIRFLOW_CTX_TASK_ID='game_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-11-04T07:05:10.313424+00:00' AIRFLOW_CTX_TRY_NUMBER='2' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-04T07:05:10.313424+00:00'
+[2024-11-04T18:59:06.155+0000] {logging_mixin.py:151} INFO - Extracting game data...
+[2024-11-04T18:59:07.078+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:07.080+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 500
+[2024-11-04T18:59:07.543+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:07.544+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 1000
+[2024-11-04T18:59:08.090+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:08.091+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 1500
+[2024-11-04T18:59:08.453+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:08.455+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 2000
+[2024-11-04T18:59:08.837+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:08.839+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 2500
+[2024-11-04T18:59:09.359+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:09.360+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 3000
+[2024-11-04T18:59:09.731+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:09.733+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 3500
+[2024-11-04T18:59:10.321+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:10.322+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 4000
+[2024-11-04T18:59:10.662+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:10.663+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 4500
+[2024-11-04T18:59:10.981+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:10.982+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 5000
+[2024-11-04T18:59:11.412+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:11.414+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 5500
+[2024-11-04T18:59:11.843+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:11.844+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 6000
+[2024-11-04T18:59:12.381+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:12.382+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 6500
+[2024-11-04T18:59:12.737+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:12.738+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 7000
+[2024-11-04T18:59:13.260+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:13.262+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 7500
+[2024-11-04T18:59:13.644+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:13.645+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 8000
+[2024-11-04T18:59:13.981+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:13.982+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 8500
+[2024-11-04T18:59:14.362+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:14.363+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 9000
+[2024-11-04T18:59:14.815+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:14.816+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 9500
+[2024-11-04T18:59:15.196+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:15.197+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 10000
+[2024-11-04T18:59:15.597+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:15.598+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 10500
+[2024-11-04T18:59:15.991+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:15.992+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 11000
+[2024-11-04T18:59:16.371+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:16.372+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 11500
+[2024-11-04T18:59:16.753+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:16.754+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 12000
+[2024-11-04T18:59:17.138+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:17.139+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 12500
+[2024-11-04T18:59:17.653+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:17.654+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 13000
+[2024-11-04T18:59:17.996+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:17.998+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 13500
+[2024-11-04T18:59:18.355+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:18.356+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 14000
+[2024-11-04T18:59:18.673+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:18.675+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 14500
+[2024-11-04T18:59:19.324+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:19.326+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 15000
+[2024-11-04T18:59:19.705+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:19.707+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 15500
+[2024-11-04T18:59:20.030+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:20.032+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 16000
+[2024-11-04T18:59:20.460+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:20.462+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 16500
+[2024-11-04T18:59:20.856+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:20.858+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 17000
+[2024-11-04T18:59:21.204+0000] {local_task_job_runner.py:294} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2024-11-04T18:59:21.206+0000] {process_utils.py:131} INFO - Sending 15 to group 78. PIDs of all processes in the group: [78]
+[2024-11-04T18:59:21.207+0000] {process_utils.py:86} INFO - Sending the signal 15 to group 78
+[2024-11-04T18:59:21.208+0000] {taskinstance.py:1630} ERROR - Received SIGTERM. Terminating subprocesses.
+[2024-11-04T18:59:21.260+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=78, status='terminated', exitcode=0, started='18:59:05') (78) terminated with exit code 0

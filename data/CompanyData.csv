@@ -18677,14 +18677,14 @@
 18675,8497,(Archive) ClockStone - duplicate
 18676,15261,Gwen Frey
 18677,17909,Softstar Entertainment Inc.
-18678,15304,Elastic Games
-18679,18307,剪刀石头布
-18680,32170,Domesticated Ant Games
-18681,15378,Mobge Ltd
-18682,15579,Spidersoft
-18683,15384,Corpix Games
-18684,35656,Syudio BIHO
-18685,15405,Catness Game Studios
+18678,15405,Catness Game Studios
+18679,15304,Elastic Games
+18680,18307,剪刀石头布
+18681,32170,Domesticated Ant Games
+18682,15378,Mobge Ltd
+18683,15579,Spidersoft
+18684,15384,Corpix Games
+18685,35656,Syudio BIHO
 18686,23720,Enrico Alejandro Tuason
 18687,15727,Stúdio Sýrland
 18688,15728,Bauer Studios
@@ -50711,10 +50711,10 @@
 50709,40008,TopCog
 50710,22453,THQ Inc.
 50711,51453,Pixeleur
-50712,40164,Whales And Games
-50713,53796,Kevin Thompson
-50714,20467,Alligata Software Ltd.
-50715,11551,Dolores Entertainment
+50712,11551,Dolores Entertainment
+50713,40164,Whales And Games
+50714,53796,Kevin Thompson
+50715,20467,Alligata Software Ltd.
 50716,58201,Callebe Duarte
 50717,13459,Dream Dev Studio
 50718,813,Universal Interactive Studios
@@ -56010,69 +56010,70 @@
 56008,59415,CRK Games
 56009,3594,Deep Silver Dambuster Studios
 56010,2238,EastAsiaSoft
-56011,3595,Tencent Games
-56012,5,Interplay Entertainment
-56013,620,Bungie
-56014,454,EA Sports
-56015,13126,Kongregate
-56016,58650,William Jacob
-56017,1524,The Learning Company
-56018,630,Koei
-56019,110,Focus Entertainment
-56020,1031,Core Design
-56021,4,Eidos Interactive
-56022,5501,NetEase Games
-56023,366,Epyx
-56024,205,GT Interactive Software
-56025,2406,"Atari, Inc."
-56026,29,Rockstar Games
-56027,11667,Firebird Software
-56028,1271,Ocean Software
-56029,18532,Koei Tecmo
-56030,284,Maxis
-56031,1,Electronic Arts
-56032,66,Activision
-56033,903,Interplay Productions
-56034,17966,Xbox Game Studios
-56035,139,Take-Two Interactive
-56036,3094,Leaf
-56037,1217,Spike ChunSoft
-56038,9005,PlayWay S.A.
-56039,17463,Epic Games
-56040,3212,Gremlin Graphics Software Ltd.
-56041,818,Atlus
-56042,1281,Kemco
-56043,817,Taito
-56044,423,Deep Silver
-56045,33804,Playtronic
-56046,213,Infogrames
-56047,208,Frontier Developments
-56048,6071,Marvelous
-56049,2521,Mattel Electronics
-56050,1312,Realtime Associates
-56051,2104,Google
-56052,248,Bandai Namco Entertainment
-56053,4092,N3V Games
-56054,82,Atari
-56055,1053,Spike
-56056,1305,ValuSoft
-56057,5187,07th Expansion
-56058,21799,Levande Böcker
-56059,14847,ENTERGRAM
-56060,59336,Nato Games
-56061,1405,Nippon Ichi Software
-56062,128,Microsoft
-56063,59338,GXN Games
-56064,1010,Microsoft Studios
-56065,23,Feral Interactive
-56066,16437,Team17
-56067,28729,WayForward
-56068,439,Sumo Digital
-56069,14253,ToastieLabs
-56070,578,Gremlin Interactive
-56071,782,Marvelous Entertainment
-56072,250,Square
-56073,59397,Gamers for Harris
-56074,8181,QUByte Interactive
-56075,112,Sega
-56076,10489,Pine Studio
+56011,59416,Minimum Wage Media
+56012,3595,Tencent Games
+56013,5,Interplay Entertainment
+56014,620,Bungie
+56015,454,EA Sports
+56016,13126,Kongregate
+56017,58650,William Jacob
+56018,1524,The Learning Company
+56019,630,Koei
+56020,110,Focus Entertainment
+56021,1031,Core Design
+56022,4,Eidos Interactive
+56023,5501,NetEase Games
+56024,366,Epyx
+56025,205,GT Interactive Software
+56026,2406,"Atari, Inc."
+56027,29,Rockstar Games
+56028,11667,Firebird Software
+56029,1271,Ocean Software
+56030,18532,Koei Tecmo
+56031,284,Maxis
+56032,1,Electronic Arts
+56033,66,Activision
+56034,903,Interplay Productions
+56035,17966,Xbox Game Studios
+56036,139,Take-Two Interactive
+56037,3094,Leaf
+56038,1217,Spike ChunSoft
+56039,9005,PlayWay S.A.
+56040,17463,Epic Games
+56041,3212,Gremlin Graphics Software Ltd.
+56042,818,Atlus
+56043,1281,Kemco
+56044,817,Taito
+56045,423,Deep Silver
+56046,33804,Playtronic
+56047,213,Infogrames
+56048,208,Frontier Developments
+56049,6071,Marvelous
+56050,2521,Mattel Electronics
+56051,1312,Realtime Associates
+56052,2104,Google
+56053,248,Bandai Namco Entertainment
+56054,4092,N3V Games
+56055,82,Atari
+56056,1053,Spike
+56057,1305,ValuSoft
+56058,5187,07th Expansion
+56059,21799,Levande Böcker
+56060,14847,ENTERGRAM
+56061,59336,Nato Games
+56062,1405,Nippon Ichi Software
+56063,128,Microsoft
+56064,59338,GXN Games
+56065,1010,Microsoft Studios
+56066,23,Feral Interactive
+56067,16437,Team17
+56068,28729,WayForward
+56069,439,Sumo Digital
+56070,14253,ToastieLabs
+56071,578,Gremlin Interactive
+56072,782,Marvelous Entertainment
+56073,250,Square
+56074,59397,Gamers for Harris
+56075,8181,QUByte Interactive
+56076,112,Sega
+56077,10489,Pine Studio

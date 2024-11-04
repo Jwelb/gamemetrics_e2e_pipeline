@@ -1,0 +1,132 @@
+[2024-11-04T18:58:47.770+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T18:58:46.642488+00:00 [queued]>
+[2024-11-04T18:58:47.787+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T18:58:46.642488+00:00 [queued]>
+[2024-11-04T18:58:47.788+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2024-11-04T18:58:47.812+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): game_extraction> on 2024-11-04 18:58:46.642488+00:00
+[2024-11-04T18:58:47.824+0000] {standard_task_runner.py:57} INFO - Started process 72 to run task
+[2024-11-04T18:58:47.826+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'etl_game_pipeline', 'game_extraction', 'manual__2024-11-04T18:58:46.642488+00:00', '--job-id', '44', '--raw', '--subdir', 'DAGS_FOLDER/steam_dag.py', '--cfg-path', '/tmp/tmpqda0j73v']
+[2024-11-04T18:58:47.840+0000] {standard_task_runner.py:85} INFO - Job 44: Subtask game_extraction
+[2024-11-04T18:58:47.902+0000] {task_command.py:415} INFO - Running <TaskInstance: etl_game_pipeline.game_extraction manual__2024-11-04T18:58:46.642488+00:00 [running]> on host f6d6761c5673
+[2024-11-04T18:58:48.029+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jordan Welborn' AIRFLOW_CTX_DAG_ID='etl_game_pipeline' AIRFLOW_CTX_TASK_ID='game_extraction' AIRFLOW_CTX_EXECUTION_DATE='2024-11-04T18:58:46.642488+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-04T18:58:46.642488+00:00'
+[2024-11-04T18:58:48.030+0000] {logging_mixin.py:151} INFO - Extracting game data...
+[2024-11-04T18:58:49.485+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:49.487+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 500
+[2024-11-04T18:58:50.029+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:50.030+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 1000
+[2024-11-04T18:58:50.449+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:50.457+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 1500
+[2024-11-04T18:58:51.075+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:51.076+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 2000
+[2024-11-04T18:58:51.660+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:51.662+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 2500
+[2024-11-04T18:58:52.065+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:52.067+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 3000
+[2024-11-04T18:58:52.614+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:52.616+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 3500
+[2024-11-04T18:58:53.021+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:53.023+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 4000
+[2024-11-04T18:58:53.472+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:53.474+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 4500
+[2024-11-04T18:58:53.885+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:53.886+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 5000
+[2024-11-04T18:58:54.468+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:54.470+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 5500
+[2024-11-04T18:58:54.904+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:54.906+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 6000
+[2024-11-04T18:58:55.256+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:55.257+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 6500
+[2024-11-04T18:58:55.660+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:55.661+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 7000
+[2024-11-04T18:58:56.071+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:56.073+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 7500
+[2024-11-04T18:58:56.452+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:56.454+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 8000
+[2024-11-04T18:58:57.065+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:57.066+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 8500
+[2024-11-04T18:58:57.493+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:57.495+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 9000
+[2024-11-04T18:58:57.893+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:57.894+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 9500
+[2024-11-04T18:58:58.435+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:58.437+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 10000
+[2024-11-04T18:58:58.811+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:58.813+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 10500
+[2024-11-04T18:58:59.323+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:59.324+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 11000
+[2024-11-04T18:58:59.837+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:58:59.838+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 11500
+[2024-11-04T18:59:00.263+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:00.264+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 12000
+[2024-11-04T18:59:00.597+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:00.599+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 12500
+[2024-11-04T18:59:01.192+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:01.194+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 13000
+[2024-11-04T18:59:01.613+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:01.614+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 13500
+[2024-11-04T18:59:02.050+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:02.051+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 14000
+[2024-11-04T18:59:02.592+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:02.593+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 14500
+[2024-11-04T18:59:02.977+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:02.978+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 15000
+[2024-11-04T18:59:03.401+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:03.403+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 15500
+[2024-11-04T18:59:03.768+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:03.769+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 16000
+[2024-11-04T18:59:04.304+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:04.305+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 16500
+[2024-11-04T18:59:04.734+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:04.735+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 17000
+[2024-11-04T18:59:05.305+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:05.306+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 17500
+[2024-11-04T18:59:05.644+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:05.646+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 18000
+[2024-11-04T18:59:06.180+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:06.181+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 18500
+[2024-11-04T18:59:06.705+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:06.706+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 19000
+[2024-11-04T18:59:07.067+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:07.068+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 19500
+[2024-11-04T18:59:07.583+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:07.584+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 20000
+[2024-11-04T18:59:08.167+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:08.168+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 20500
+[2024-11-04T18:59:08.611+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:08.612+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 21000
+[2024-11-04T18:59:09.196+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:09.198+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 21500
+[2024-11-04T18:59:09.809+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:09.810+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 22000
+[2024-11-04T18:59:11.016+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:11.018+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 22500
+[2024-11-04T18:59:11.392+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:11.394+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 23000
+[2024-11-04T18:59:11.724+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:11.726+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 23500
+[2024-11-04T18:59:12.079+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:12.080+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 24000
+[2024-11-04T18:59:12.627+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:12.628+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 24500
+[2024-11-04T18:59:12.998+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:12.999+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 25000
+[2024-11-04T18:59:13.361+0000] {logging_mixin.py:151} INFO - Adding games..
+[2024-11-04T18:59:13.363+0000] {logging_mixin.py:151} INFO - Fetched 500 games. Total so far: 25500
+[2024-11-04T18:59:13.699+0000] {logging_mixin.py:151} INFO - Rate limit hit, sleeping for 1 second.
+[2024-11-04T18:59:14.702+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 192, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.9/site-packages/airflow/operators/python.py", line 209, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/pipelines/game_pipeline.py", line 13, in extract_data
+    games = extract_all_games()
+  File "/opt/airflow/etls/game_etl.py", line 58, in extract_all_games
+    game_data = extract_games(token, limit=limit, offset=offset)
+  File "/opt/airflow/etls/game_etl.py", line 45, in extract_games
+    response.raise_for_status()
+  File "/home/airflow/.local/lib/python3.9/site-packages/requests/models.py", line 1021, in raise_for_status
+    raise HTTPError(http_error_msg, response=self)
+requests.exceptions.HTTPError: 429 Client Error: Too Many Requests for url: https://api.igdb.com/v4/games
+[2024-11-04T18:59:14.717+0000] {taskinstance.py:1398} INFO - Marking task as UP_FOR_RETRY. dag_id=etl_game_pipeline, task_id=game_extraction, execution_date=20241104T185846, start_date=20241104T185847, end_date=20241104T185914
+[2024-11-04T18:59:14.729+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 44 for task game_extraction (429 Client Error: Too Many Requests for url: https://api.igdb.com/v4/games; 72)
+[2024-11-04T18:59:14.751+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-11-04T18:59:14.771+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
