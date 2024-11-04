@@ -14,8 +14,6 @@ default_args = {
     'start_date': datetime(year=2024,month=11,day=1),
     'retries': 1
 }
-# This does not need to be daily it needs to be weekly [DONE]
-# Change the dag id to reflect the API were using [Done]
 dag = DAG(
     dag_id= 'etl_game_pipeline',
     default_args=default_args,
@@ -24,9 +22,6 @@ dag = DAG(
     tags=['data', 'etl', 'pipeline']
 )
 
-# Break out each task of the pipeline [DONE]
-# Make one big extraction file and one big load file
-# Change the task id to reflect the API were using [DONE]
 extract= PythonOperator(
     task_id = 'game_extraction',
     python_callable = extract_data,
