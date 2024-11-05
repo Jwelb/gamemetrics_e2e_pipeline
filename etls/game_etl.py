@@ -20,6 +20,7 @@ def get_igdb_token():
     }
     response = requests.post(auth_url, params=params)
     response.raise_for_status()
+    print(response.json()['access_token'])
     return response.json()['access_token']
 
 
@@ -83,6 +84,23 @@ def extract_all_companies():
 
     return companies
 
+def extract_all_involved_companies():
+    """Extracts all companies using pagination."""
+    token = get_igdb_token()
+    involved_companies = []
+    offset = 0
+    limit = 500  # Maximum limit for a single IGDB API request
+    while True:
+        involved_company_data = extract_involved_company_data(token, limit=limit, offset=offset)
+        if not involved_company_data:
+            print("No more companies found, ending extraction...")
+            break
+        involved_companies.extend(involved_company_data)
+        offset += limit
+        print(f"Fetched {len(involved_company_data)} companies. Total so far: {len(involved_companies)}")
+
+    return involved_companies
+
 def extract_company_data(token, limit, offset):
     """Extracts company data from the IGDB API with pagination."""
     headers = {
@@ -103,6 +121,27 @@ def extract_company_data(token, limit, offset):
     print("adding company...")
 
     return companies
+
+def extract_involved_company_data(token, limit, offset):
+    """Extracts company data from the IGDB API with pagination."""
+    headers = {
+        'Client-ID': CLIENT_ID,
+        'Authorization': f'Bearer {token}',
+        'Accept': 'application/json'
+    }
+    data = (
+        f'fields game,company; limit {limit}; offset {offset};'
+    )
+
+    response = requests.post('https://api.igdb.com/v4/involved_companies', headers=headers, data=data)
+    if response.status_code == 429:
+        print("Rate limit hit, sleeping for 1 second.")
+        time.sleep(1)
+    response.raise_for_status()
+    involved_companies = response.json()
+    print("adding involved company...")
+
+    return involved_companies
 
 def extract_platforms():
     """Extract platform data from IGDB."""
@@ -141,3 +180,4 @@ def load_data_to_azure(data: pd.DataFrame, filename: str):
         'account_key' : AZURE_KEY}, index=False
     )
 
+get_igdb_token()
