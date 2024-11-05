@@ -1,11 +1,12 @@
 import sys
 import os
 import pandas as pd
+import datetime as date
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../etls')))
 
 from game_etl import extract_platforms,extract_themes,extract_all_companies, extract_all_games, load_data_to_azure
 
-
+current_datetime = date.datetime.now().strftime("%Y%m%d_%H%M%S")
 def extract_data():
     """Main function to orchestrate the extraction, transformation, and loading process."""
     # Extract game data
@@ -49,10 +50,10 @@ def load_data():
     theme_df = pd.read_csv(theme_path)
     company_df = pd.read_csv(company_path)
     # load all the data into azure
-    load_data_to_azure(games_df,'GameData')
-    load_data_to_azure(platform_df,'PlatformData')
-    load_data_to_azure(theme_df,'ThemeData')
-    load_data_to_azure(company_df,'CompanyData')
+    load_data_to_azure(games_df, f'GameData{current_datetime}')
+    load_data_to_azure(platform_df,f'PlatformData{current_datetime}')
+    load_data_to_azure(theme_df,f'ThemeData{current_datetime}')
+    load_data_to_azure(company_df,f'CompanyData{current_datetime}')
     
     
     

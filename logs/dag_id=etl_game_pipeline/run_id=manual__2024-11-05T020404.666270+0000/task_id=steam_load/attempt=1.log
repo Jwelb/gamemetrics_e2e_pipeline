@@ -1,0 +1,369 @@
+[2024-11-05T02:10:42.940+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: etl_game_pipeline.steam_load manual__2024-11-05T02:04:04.666270+00:00 [queued]>
+[2024-11-05T02:10:42.948+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: etl_game_pipeline.steam_load manual__2024-11-05T02:04:04.666270+00:00 [queued]>
+[2024-11-05T02:10:42.949+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 2
+[2024-11-05T02:10:42.961+0000] {taskinstance.py:1380} INFO - Executing <Task(PythonOperator): steam_load> on 2024-11-05 02:04:04.666270+00:00
+[2024-11-05T02:10:42.966+0000] {standard_task_runner.py:57} INFO - Started process 55 to run task
+[2024-11-05T02:10:42.968+0000] {standard_task_runner.py:84} INFO - Running: ['airflow', 'tasks', 'run', 'etl_game_pipeline', 'steam_load', 'manual__2024-11-05T02:04:04.666270+00:00', '--job-id', '54', '--raw', '--subdir', 'DAGS_FOLDER/game_dag.py', '--cfg-path', '/tmp/tmpwltwztdj']
+[2024-11-05T02:10:42.971+0000] {standard_task_runner.py:85} INFO - Job 54: Subtask steam_load
+[2024-11-05T02:10:43.014+0000] {task_command.py:415} INFO - Running <TaskInstance: etl_game_pipeline.steam_load manual__2024-11-05T02:04:04.666270+00:00 [running]> on host 1cab5abea7f3
+[2024-11-05T02:10:43.085+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Jordan Welborn' AIRFLOW_CTX_DAG_ID='etl_game_pipeline' AIRFLOW_CTX_TASK_ID='steam_load' AIRFLOW_CTX_EXECUTION_DATE='2024-11-05T02:04:04.666270+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-11-05T02:04:04.666270+00:00'
+[2024-11-05T02:10:44.491+0000] {_universal.py:514} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/GameData.csv'
+Request method: 'DELETE'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2a1f8926-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-11-05T02:10:44.751+0000] {_universal.py:550} INFO - Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16285f3d-801e-00fe-1a27-2f8a3b000000'
+    'x-ms-client-request-id': '2a1f8926-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-delete-type-permanent': 'REDACTED'
+    'x-ms-deletion-id': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:44 GMT'
+[2024-11-05T02:10:44.753+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/GameData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5248827'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2a479a7e-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:46.995+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16285f7c-801e-00fe-5027-2f8a3b000000'
+    'x-ms-client-request-id': '2a479a7e-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:46 GMT'
+[2024-11-05T02:10:47.269+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/GameData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5244726'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2bc77e6e-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:49.139+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16286555-801e-00fe-3827-2f8a3b000000'
+    'x-ms-client-request-id': '2bc77e6e-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:48 GMT'
+[2024-11-05T02:10:49.403+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/GameData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5247280'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2d0d19f0-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:52.071+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16286abc-801e-00fe-3a27-2f8a3b000000'
+    'x-ms-client-request-id': '2d0d19f0-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:51 GMT'
+[2024-11-05T02:10:52.357+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/GameData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '5245409'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2ecfecfe-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:55.769+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '162873da-801e-00fe-3b27-2f8a3b000000'
+    'x-ms-client-request-id': '2ecfecfe-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:55 GMT'
+[2024-11-05T02:10:55.893+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/GameData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '2925766'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '30eb73c8-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:58.411+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16287e86-801e-00fe-3827-2f8a3b000000'
+    'x-ms-client-request-id': '30eb73c8-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:57 GMT'
+[2024-11-05T02:10:58.414+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/GameData.csv?comp=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '207'
+    'x-ms-meta-is_directory': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/xml'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '326c067c-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:58.481+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Tue, 05 Nov 2024 02:10:58 GMT'
+    'Etag': '"0x8DCFD3F16A1B68C"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16288520-801e-00fe-5b27-2f8a3b000000'
+    'x-ms-client-request-id': '326c067c-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:57 GMT'
+[2024-11-05T02:10:58.485+0000] {_universal.py:514} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/PlatformData.csv'
+Request method: 'DELETE'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3276f6a4-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-11-05T02:10:58.551+0000] {_universal.py:550} INFO - Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16288566-801e-00fe-1d27-2f8a3b000000'
+    'x-ms-client-request-id': '3276f6a4-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-delete-type-permanent': 'REDACTED'
+    'x-ms-deletion-id': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:57 GMT'
+[2024-11-05T02:10:58.553+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/PlatformData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '4528'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '32815af4-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:58.607+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16288590-801e-00fe-4427-2f8a3b000000'
+    'x-ms-client-request-id': '32815af4-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:57 GMT'
+[2024-11-05T02:10:58.609+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/PlatformData.csv?comp=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '91'
+    'x-ms-meta-is_directory': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/xml'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3289dc42-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:58.669+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Tue, 05 Nov 2024 02:10:58 GMT'
+    'Etag': '"0x8DCFD3F16BEBC20"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '162885ae-801e-00fe-6027-2f8a3b000000'
+    'x-ms-client-request-id': '3289dc42-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:57 GMT'
+[2024-11-05T02:10:58.673+0000] {_universal.py:514} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/ThemeData.csv'
+Request method: 'DELETE'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '32939070-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-11-05T02:10:58.730+0000] {_universal.py:550} INFO - Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '162885d0-801e-00fe-8027-2f8a3b000000'
+    'x-ms-client-request-id': '32939070-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-delete-type-permanent': 'REDACTED'
+    'x-ms-deletion-id': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:57 GMT'
+[2024-11-05T02:10:58.732+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/ThemeData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '371'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '329ca7be-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:58.777+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '162885f0-801e-00fe-1f27-2f8a3b000000'
+    'x-ms-client-request-id': '329ca7be-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:58 GMT'
+[2024-11-05T02:10:58.779+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/ThemeData.csv?comp=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '91'
+    'x-ms-meta-is_directory': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/xml'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '32a3bb8a-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:58.831+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Tue, 05 Nov 2024 02:10:58 GMT'
+    'Etag': '"0x8DCFD3F16D766E4"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16288610-801e-00fe-3d27-2f8a3b000000'
+    'x-ms-client-request-id': '32a3bb8a-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:58 GMT'
+[2024-11-05T02:10:58.919+0000] {_universal.py:514} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/CompanyData.csv'
+Request method: 'DELETE'
+Request headers:
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '32b91728-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+[2024-11-05T02:10:58.975+0000] {_universal.py:550} INFO - Response status: 202
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '16288677-801e-00fe-2127-2f8a3b000000'
+    'x-ms-client-request-id': '32b91728-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-delete-type-permanent': 'REDACTED'
+    'x-ms-deletion-id': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:58 GMT'
+[2024-11-05T02:10:58.977+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/CompanyData.csv?comp=REDACTED&blockid=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '1478203'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '32c20aea-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:59.743+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '162886ac-801e-00fe-5227-2f8a3b000000'
+    'x-ms-client-request-id': '32c20aea-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:58 GMT'
+[2024-11-05T02:10:59.745+0000] {_universal.py:511} INFO - Request URL: 'https://steamdata.blob.core.windows.net/steamdata/data/CompanyData.csv?comp=REDACTED'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '91'
+    'x-ms-meta-is_directory': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/xml'
+    'Accept': 'application/xml'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '333725f0-9b1b-11ef-8e9d-0242ac120007'
+    'User-Agent': 'azsdk-python-storage-blob/12.17.0 Python/3.9.18 (Linux-5.15.133.1-microsoft-standard-WSL2-x86_64-with-glibc2.31)'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+[2024-11-05T02:10:59.807+0000] {_universal.py:550} INFO - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Last-Modified': 'Tue, 05 Nov 2024 02:10:59 GMT'
+    'Etag': '"0x8DCFD3F176C5DC8"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '162888ec-801e-00fe-5127-2f8a3b000000'
+    'x-ms-client-request-id': '333725f0-9b1b-11ef-8e9d-0242ac120007'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Tue, 05 Nov 2024 02:10:59 GMT'
+[2024-11-05T02:10:59.818+0000] {python.py:194} INFO - Done. Returned value was: None
+[2024-11-05T02:10:59.827+0000] {taskinstance.py:1398} INFO - Marking task as SUCCESS. dag_id=etl_game_pipeline, task_id=steam_load, execution_date=20241105T020404, start_date=20241105T021042, end_date=20241105T021059
+[2024-11-05T02:10:59.872+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 0
+[2024-11-05T02:10:59.888+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
