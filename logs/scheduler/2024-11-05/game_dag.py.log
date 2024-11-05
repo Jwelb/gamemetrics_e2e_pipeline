@@ -4275,3 +4275,10 @@
 [2024-11-05T07:02:06.949+0000] {logging_mixin.py:151} INFO - [2024-11-05T07:02:06.948+0000] {dag.py:2915} INFO - Sync 1 DAGs
 [2024-11-05T07:02:06.971+0000] {logging_mixin.py:151} INFO - [2024-11-05T07:02:06.971+0000] {dag.py:3696} INFO - Setting next_dagrun for etl_game_pipeline to 2024-11-03T00:00:00+00:00, run_after=2024-11-10T00:00:00+00:00
 [2024-11-05T07:02:06.991+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/game_dag.py took 0.420 seconds
+[2024-11-05T07:02:37.217+0000] {processor.py:157} INFO - Started process (PID=1201) to work on /opt/airflow/dags/game_dag.py
+[2024-11-05T07:02:37.219+0000] {processor.py:829} INFO - Processing file /opt/airflow/dags/game_dag.py for tasks to queue
+[2024-11-05T07:02:37.220+0000] {logging_mixin.py:151} INFO - [2024-11-05T07:02:37.219+0000] {dagbag.py:539} INFO - Filling up the DagBag from /opt/airflow/dags/game_dag.py
+[2024-11-05T07:02:37.639+0000] {processor.py:839} INFO - DAG(s) dict_keys(['etl_game_pipeline']) retrieved from /opt/airflow/dags/game_dag.py
+[2024-11-05T07:02:37.668+0000] {logging_mixin.py:151} INFO - [2024-11-05T07:02:37.668+0000] {dag.py:2915} INFO - Sync 1 DAGs
+[2024-11-05T07:02:37.697+0000] {logging_mixin.py:151} INFO - [2024-11-05T07:02:37.697+0000] {dag.py:3696} INFO - Setting next_dagrun for etl_game_pipeline to 2024-11-03T00:00:00+00:00, run_after=2024-11-10T00:00:00+00:00
+[2024-11-05T07:02:37.723+0000] {processor.py:179} INFO - Processing /opt/airflow/dags/game_dag.py took 0.509 seconds
