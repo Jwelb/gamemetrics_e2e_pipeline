@@ -6,7 +6,8 @@ sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../e
 
 from game_etl import extract_platforms,extract_themes,extract_all_companies, extract_all_games, load_data_to_azure
 
-current_datetime = date.datetime.now().strftime("%Y%m%d_%H%M%S")
+current_datetime = date.datetime.now().strftime("%Y%m%d_%H%M")
+
 def extract_data():
     """Main function to orchestrate the extraction, transformation, and loading process."""
     # Extract game data
